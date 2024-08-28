@@ -1,6 +1,6 @@
 import { Container } from '@mui/material'
-import LoginSignupForm from './component/LoginSignUp'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LoginSignupForm from './component/LoginSignUp'
 import LandingPage from './component/LandingPage'
 
 function App() {
