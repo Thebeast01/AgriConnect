@@ -1,5 +1,5 @@
 
-import LoginSignupForm from './component/LoginSignUp'
+
 import { Container } from '@mui/material'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LoginSignupForm from './component/LoginSignUp'

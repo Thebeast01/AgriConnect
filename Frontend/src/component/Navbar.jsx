@@ -27,25 +27,25 @@ const Navbar = () => {
                                         display: 'flex',
                                         justifyContent: 'space-around',
                                         alignItems: 'center',
-                                        fontSize: '17px',
+                                                fontSize: '18px',
 
                                 }}
                         >
-                                <Link href='/home' underline='none' color='black'>
+                                        <Link to='/home' underline='hover' color='black' >
                                         Home
                                 </Link>
-                                <Link href='/Features' underline='none'color='black'>
+                                        <Link href='#Features' underline='hover' color='black'>
                                         Features
                                 </Link>
-                                <Link href='/how-it-works' underline='none'color='black'>
+                                        <Link href='#how-it-works' underline='hover' color='black'>
                                         How It Works
                                 </Link>
 
-                                <Link href='/aboutUs' underline='none'color='black'>
+                                        <Link href='#aboutUs' underline='hover' color='black'>
                                         About Us
                                 </Link>
 
-                                <Link href='/contactUs' underline='none'color='black'>
+                                        <Link href='#contactUs' underline='hover' color='black'>
                                         Contact Us
                                 </Link>
                         </div>
