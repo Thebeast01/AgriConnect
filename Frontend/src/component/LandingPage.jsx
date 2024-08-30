@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import heroImage from '../assets/HeroPng.png';
 import AboutUs from './AboutUs';
 import Features from './Features';
+import { Link } from 'react-router-dom';
 function LandingPage() {
 	return (
                 <div style={{ height: '100vh' }}>
@@ -33,18 +34,21 @@ function LandingPage() {
 
 
                                         <Box marginTop={'2rem'}>
+                                                <Link to={"/Register"}> 
                                                 <Button variant='contained' sx={{
                                                         backgroundImage: 'linear-gradient(to right, #35903A, #29772D)',
                                                         width: '17rem',
                                                         padding: '10px',
                                                         marginRight: '3rem'
                                                 }} >Join as Farmer</Button>
+                                                </Link>
+                                                <Link to={"/Register"}>
                                                 <Button variant='contained' sx={{
                                                         backgroundImage: 'linear-gradient(to right, #A15C1A, #875423)',
-
                                                         padding: '10px',
                                                         width: '17rem'
-                                                }} >Join as Farmer</Button>
+                                                }} >Join as Buyer</Button>
+                                                </Link>
                                         </Box>
                                 </Box>
 
