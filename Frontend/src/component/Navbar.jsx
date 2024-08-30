@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-import { AppBar, Toolbar, Typography, Button, Box, Link } from '@mui/material';
+import { AppBar, Toolbar, Link } from '@mui/material';
 
-import logo from '../assets/AgreeConnect.png';
+import logo from '../../public/assets/icons/AgreeConnect.png';
 const Navbar = () => {
         return (
         <AppBar
