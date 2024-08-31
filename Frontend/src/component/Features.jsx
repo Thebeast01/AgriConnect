@@ -55,8 +55,7 @@ const Features = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
                     width: '100%',
-                    marginLeft: '60px',
-                    marginTop:'50px'
+                    marginLeft: '60px'
                 }}>
                         <Typography variant='h4' color='#111' fontSize={'2.5rem'} fontWeight={'bold'}>Our Key Features</Typography>
                         <Typography variant='h6' fontSize={'1.5rem'} color='#333' align='left' marginTop={'0.5rem'}>Transforming Agriculture with Technology and Trust</Typography>
@@ -68,7 +67,7 @@ const Features = () => {
                                 display: 'flex',
                                 width: '90%',
                                 height: 'fit-content',
-                                margin: '20px auto',
+                                margin: ' auto',
                                 flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
                                 alignItems: 'center',
                                 padding: '20px',
