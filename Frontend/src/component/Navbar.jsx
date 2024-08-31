@@ -1,8 +1,13 @@
 import React from 'react'
 
+<<<<<<< HEAD
 import { AppBar, Toolbar, Typography, Button, Box, Link } from '@mui/material';
+=======
 
-import logo from '../assets/AgreeConnect.png';
+import { AppBar, Toolbar, Link } from '@mui/material';
+>>>>>>> Vishal
+
+import logo from '../../public/assets/icons/AgreeConnect.png';
 const Navbar = () => {
         return (
         <AppBar

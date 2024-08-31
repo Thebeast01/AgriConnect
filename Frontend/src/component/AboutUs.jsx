@@ -7,7 +7,6 @@ const AboutUs = () => {
                           height: '100vh'
                   }}
           >
-        About us
     </div>
   )
 }
