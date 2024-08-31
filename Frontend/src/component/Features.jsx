@@ -31,7 +31,7 @@ const featuresData = [
 
 const Features = () => {
     return (
-        <div style={{ margin: '2px' }}>
+        <div style={{ margin: '2px' }} id='feature'>
             <div style={{
                 height: 'fit-content',
                 display: 'flex',
@@ -90,7 +90,7 @@ const Features = () => {
                                     margin: '1rem',
                                     padding: '20px',
                                     width: '100%',
-                                    flex: '1 1 60%', 
+                                    flex: '1 1 60%',
                                     maxWidth: '500px',
                                 }}>
                                 <Typography variant="h5" style={{

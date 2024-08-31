@@ -21,7 +21,7 @@ const Dashboard = () => {
     <Container maxWidth="xl" display={'flex'}>
       <Box gap={'5rem'} flex={1} display={'flex'} flexDirection={'row'}>
         <Grid container xs={12} md={4}>
-          <Grid item md={12} height={'80vh'} sx={{
+          <Grid item md={12} height={'70vh'} sx={{
             backgroundColor: 'white',
             display: 'flex',
             flexDirection: 'column',
@@ -31,9 +31,54 @@ const Dashboard = () => {
             boxShadow: 3
 
           }}>
-            <Box sx={{ borderRadius: '1rem' }}>
-              <img src={OIP} />
+            <Box sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}>
+              <Box sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
 
+              }}>
+              <img src={OIP} />
+                <Typography fontWeight={'bold'} variant='h5' marginTop={'1rem'}>User Name</Typography>
+                <Typography fontWeight={'bold'} variant='h6' color={Colors.text1}>@UserID</Typography>
+              </Box>
+              <Box sx={{
+                marginTop: '2rem',
+                boxShadow: 3,
+                padding: '2rem',
+                borderRadius: '1rem',
+
+              }}>
+                <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}>Farmer Name : <span style={{ color: 'black' }}>Chandu</span> </Typography>
+                <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}> Email Id: <span style={{ color: 'black' }}>Chandu@gmail.com</span> </Typography>
+                <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}>Phone No. : <span style={{ color: 'black' }}>485948459</span> </Typography>  <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}>Address: <span style={{ color: 'black' }}>23F sector 3 , Ram Nagar, New York</span> </Typography>
+              </Box>
+
+            </Box>
+            <Box sx={{
+              marginTop: '5rem',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              width: '80%'
+            }}>
+              <Button variant='contained'
+                sx={{
+                  backgroundColor: 'white',
+
+                  color: 'black',
+                  boxShadow: 3,
+                  paddingX: '2rem'
+
+
+                }}
+              >Edit</Button>
+              <Button variant='contained'>More</Button>
             </Box>
           </Grid>
         </Grid>

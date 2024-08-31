@@ -36,7 +36,7 @@ const Navbar = () => {
                                         <NavLink to='home' underline='hover' color='black' >
                                                 Home
                                         </NavLink>
-                                        <Link to="features"
+                                        <Link to="feature"
                                                 spy={true}
                                                 smooth={true}
                                                 offset={-70}
