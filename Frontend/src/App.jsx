@@ -1,21 +1,15 @@
 
 import { useState, useEffect } from 'react'
 import { Container } from '@mui/material'
-import { BrowserRouter, Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-import { Login } from './component/Login'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import Login from './component/Login'
 import LandingPage from './component/LandingPage'
 import AboutUs from './component/AboutUs'
 import ContactUs from './component/ContactUs'
-import { Register } from './component/Register'
-import { auth } from './component/Firebase'
+import Register from './component/Register'
 import Features from './component/Features'
 function App() {
-  const [user, setUser] = useState();
-  useEffect(() => {
-    auth.onAuthStateChanged(user => {
-      setUser(user)
-    })
-  })
+
 
   return (
 

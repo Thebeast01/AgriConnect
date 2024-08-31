@@ -1,14 +1,15 @@
-import React from 'react'
 
 const AboutUs = () => {
   return (
-          <div id='#aboutUs'
+
+          <div
                   style={{
                           height: '100vh'
                   }}
           >
+                  <h1 id="about"> Hello</h1>
         About us
-    </div>
+          </div>
   )
 }
 

@@ -3,11 +3,13 @@ import Navbar from './Navbar';
 import heroImage from '../assets/HeroPng.png';
 import AboutUs from './AboutUs';
 import Features from './Features';
-import { Link } from 'react-router-dom';
-function LandingPage() {
-	return (
+import { useNavigate } from 'react-router-dom';
+
+const LandingPage = () => {
+        const navigate = useNavigate()
+        return (
                 <div style={{ height: '100vh' }}>
-                        <Navbar/>
+
                         <Box
                                 sx={{
                                         display: 'flex',
@@ -33,22 +35,21 @@ function LandingPage() {
                                         </Typography>
 
 
-                                        <Box marginTop={'2rem'}>
-                                                <Link to={"/Register"}> 
+                                        <Box marginTop={'2rem'} flex={1}>
+
                                                 <Button variant='contained' sx={{
                                                         backgroundImage: 'linear-gradient(to right, #35903A, #29772D)',
                                                         width: '17rem',
                                                         padding: '10px',
                                                         marginRight: '3rem'
-                                                }} >Join as Farmer</Button>
-                                                </Link>
-                                                <Link to={"/Register"}>
+                                                }} onClick={() => navigate('/register')} >Join as Farmer</Button>
+
+
                                                 <Button variant='contained' sx={{
                                                         backgroundImage: 'linear-gradient(to right, #A15C1A, #875423)',
                                                         padding: '10px',
                                                         width: '17rem'
                                                 }} >Join as Buyer</Button>
-                                                </Link>
                                         </Box>
                                 </Box>
 
@@ -57,7 +58,8 @@ function LandingPage() {
                         <Features />
                         <AboutUs />
                 </div>
-	);
+        );
 }
+
 
 export default LandingPage;
