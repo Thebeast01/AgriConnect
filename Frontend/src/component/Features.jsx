@@ -36,7 +36,7 @@ const Features = () => {
                                 boxShadow: '1px 2px 4px rgba(2, 2, 2, 0.2)',
                                 borderRadius: '10px',
                                 padding: '10px',
-                                flex: '1 1 40%', // Flexible width to make it responsive
+                                flex: '1 1 40%',
                                 display: 'flex',
                                 justifyContent: 'center',
                             }}>
