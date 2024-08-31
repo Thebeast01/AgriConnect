@@ -1,12 +1,11 @@
-import { Container, Box, Typography, Button } from '@mui/material'
+import { Box, Typography, Button } from '@mui/material'
 import Navbar from './Navbar';
-import heroImage from '../assets/HeroPng.png';
 import AboutUs from './AboutUs';
 import Features from './Features';
 import { Link } from 'react-router-dom';
 function LandingPage() {
 	return (
-                <div style={{ height: '100vh' }}>
+                <div style={{ height: '100%' }}>
                         <Navbar/>
                         <Box
                                 sx={{
@@ -14,21 +13,20 @@ function LandingPage() {
                                         flexDirection: 'column',
                                         justifyContent: 'center',
                                         alignItems: 'baseline',
-                                        width: '100%',
+                                        width: '100vw',
                                         height: '80vh',
                                         flex: 1,
-                                        backgroundImage: `url(${heroImage})`,
+                                        backgroundImage: 'url(../../public/assets/images/background-img3.jpg)',
                                         backgroundRepeat: 'no-repeat',
-                                        backgroundSize: 'cover'
-
+                                        backgroundSize: 'cover',
                                 }}
                         >
                                 <Box sx={{
                                         marginLeft: '10rem',
-                                }}><Typography variant='h3' color='white'>
+                                }}><Typography variant='h3' color='#fff'>
                                                 Empowering Farmers with Guaranteed <br />Market Access.
                                         </Typography>
-                                        <Typography variant='h5' align='left' color='white' marginTop={'1rem'} fontSize={'22px'} >
+                                        <Typography variant='h5' align='left' color='#fff' marginTop={'1rem'} fontSize={'22px'} >
                                                 Streamline your farming business with contract <br /> farming, AI-driven pricing, and transparent <br />transactions
                                         </Typography>
 
@@ -51,8 +49,6 @@ function LandingPage() {
                                                 </Link>
                                         </Box>
                                 </Box>
-
-
                         </Box>
                         <Features />
                         <AboutUs />
