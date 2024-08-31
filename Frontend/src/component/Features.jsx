@@ -136,13 +136,7 @@ const Features = () => {
                                 borderRadius: '10px',
                                 padding: '10px',
                         }}>
-                        <Badge badgeContent={1} color='primary' style={{
-                                fontSize: 20,
-                                padding: '8px',
-                                backgroundColor: 'red',
-                                color: 'white',
-                        }}>
-                                
+                        <Badge badgeContent={1} color="primary" overlap="circle">
                         </Badge>
                         <CardMedia
                                 component="img"
