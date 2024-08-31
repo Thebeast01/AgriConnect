@@ -2,10 +2,9 @@ import React from 'react'
 import { Card, CardContent, Typography, Box } from '@mui/material';
 
 
-
 const featuresData = [
         {
-            image: '../assets/Dashboard.png',
+            image: 'public/Guaranteed_Market_access,jpg',
             title: 'Guaranteed Market Access & Seamless Communication',
             description: 'Connect directly with reliable buyers and sellers, reducing market risks.',
         },
