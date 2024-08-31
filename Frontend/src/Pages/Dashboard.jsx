@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Box, Button, Container, Typography, Card, CardContent, Grid, CardHeader, CardMedia, CardActions, TextField, IconButton } from '@mui/material';
+import { Box, Button, Container, Typography, Card, CardContent, Grid, CardHeader, CardMedia, CardActions, TextField, IconButton, Skeleton } from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { Colors } from '../Colors';
 import OIP from '../assets/profile.png'
+import Plus from '../assets/plus.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 const Dashboard = () => {
   const [cropsData, setCropsData] = useState([
     {
@@ -18,7 +21,13 @@ const Dashboard = () => {
     setCropsData([...cropsData, { /* New crop data */ }]);
   };
   return (
-    <Container maxWidth="xl" display={'flex'}>
+    <Container maxWidth="xl" display={'flex'} sx={{
+      height:
+        '90vh',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: '3rem'
+    }}>
       <Box gap={'5rem'} flex={1} display={'flex'} flexDirection={'row'}>
         <Grid container xs={12} md={4}>
           <Grid item md={12} height={'80vh'} sx={{
@@ -31,37 +40,148 @@ const Dashboard = () => {
             boxShadow: 3
 
           }}>
-            <Box sx={{ borderRadius: '1rem' }}>
+            <Box sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}>
+              <Box sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+
+              }}>
               <img src={OIP} />
+                <Typography fontWeight={'bold'} variant='h5' marginTop={'1rem'}>User Name</Typography>
+                <Typography fontWeight={'bold'} variant='h6' color={Colors.text1}>@UserID</Typography>
+              </Box>
+              <Box sx={{
+                marginTop: '2rem',
+                boxShadow: 3,
+                padding: '2rem',
+                borderRadius: '1rem',
+
+              }}>
+                <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}>Farmer Name : <span style={{ color: 'black' }}>Chandu</span> </Typography>
+                <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}> Email Id: <span style={{ color: 'black' }}>Chandu@gmail.com</span> </Typography>
+                <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}>Phone No. : <span style={{ color: 'black' }}>485948459</span> </Typography>  <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}>Address: <span style={{ color: 'black' }}>23F sector 3 , Ram Nagar, New York</span> </Typography>
+              </Box>
+
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'end',
+              width: '80%',
+              height: '100%',
+              marginBottom: '3rem'
+            }}>
+              <Button variant='contained'
+                sx={{
+                  backgroundColor: 'white',
+
+                  color: 'black',
+                  boxShadow: 3,
+                  paddingX: '2rem',
+                  fontWeight: 'bold',
+
+
+                }}
+              >Edit</Button>
+
+              <Button variant='contained'
+                sx={{
+                  backgroundColor: 'white',
+                  fontWeight: 'bold',
+                  color: 'black',
+                  boxShadow: 3,
+                  paddingX: '2rem'
+
+
+                }}
+              >More</Button>
 
             </Box>
           </Grid>
         </Grid>
-        <Grid container spacing={2}>
-          <Grid item xs={12} >
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <Typography variant="h6">Crops</Typography>
-              <IconButton onClick={handleAddMore}>
-                <AddCircleOutlineIcon />
-              </IconButton>
-            </Box>
-            <Card>
-              <CardContent>
-                <Typography variant="body2">
-                  Price: 40 Rs/kg
-                </Typography>
-                <Typography variant="body2">
-                  Quantity upto: 600 kg
-                </Typography>
-              </CardContent>
+        <Grid container spacing={4} gap={'3rem'} >
+          <Grid container sx={
+            {
+              backgroundColor: Colors.dasboardBackground,
+              borderRadius: '2rem',
+              boxShadow: 3
+            }
+          }>          <Typography variant="h3" sx={{
+            marginLeft: '2rem', marginTop: '2rem'
+          }}>Crops</Typography>
+            <Grid item xs={12} marginBottom={'1rem'} padding={'2rem'}
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                gap: '1rem',
+              }}>
+              <Card sx={
+                {
+                  height: '300px',
+                  width: '300px',
+                  borderRadius: '1rem',
+                  padding: '1rem',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  flexDirection: 'column'
+                }
+              }>
+                <Skeleton variant="rectangular" width={260} height={200} />
+                <Typography>Price : 40Rs/kg</Typography>
+                <Typography>Quantity upto : 600kg</Typography>
+              </Card>
+              <Card sx={
+                {
+                  height: '300px',
+                  width: '300px',
+                  borderRadius: '1rem',
+                  padding: '1rem',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  flexDirection: 'column'
+                }
+              }>
+                <Box sx={
+                  {
+                    backgroundColor: Colors.dasboardBackground,
+                    padding: '1rem',
+                    borderRadius: '100%',
+                    height: '100px',
+                    width: '100px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                  }
+                }>
+                  <FontAwesomeIcon icon={faPlus} fontSize={'4rem'} />
+                </Box>
             </Card>
           </Grid>
+          </Grid>
 
-          <Grid container spacing={2}>
+          <Grid container spacing={2}
+            sx={
+              {
+                backgroundColor: Colors.dasboardBackground,
+                borderRadius: '2rem',
+                boxShadow: 3,
+                padding: '2rem'
+              }
+            }>
+            <Typography variant="h4">Current Contracts</Typography>
             <Grid item xs={12}>
-              <Typography variant="h6">Current Contracts</Typography>
               {cropsData.map((crop, index) => (
-                <Card key={index}>
+                <Card key={index} sx={{
+                  borderRadius: '1rem',
+                }}>
                   <CardHeader
                     title="Buyer's Name: XYZ Company"
                     subheader="Crop Name: ABC"
