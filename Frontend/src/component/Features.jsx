@@ -46,7 +46,6 @@ const Features = () => {
                                     borderRadius: '8px',
                                     objectFit: 'cover',
                                 }} />
-                            </Box>
                             <CardContent
                                 style={{
                                     margin: '1rem',
@@ -72,7 +71,8 @@ const Features = () => {
                 </Card>
                 </Box>
                 </div>
-        )
+        </div>
+        );
 }
 
 export default Features
