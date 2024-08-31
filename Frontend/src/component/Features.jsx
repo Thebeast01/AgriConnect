@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material'
+import { Card, CardContent, CardMedia, Badge, Box, Typography } from '@mui/material'
 
 const Features = () => {
         return (
@@ -123,6 +123,44 @@ const Features = () => {
                 }}>
                         <Typography variant='h3' fontSize={'2rem'} fontWeight={'bold'} color='#fff'>How It Works</Typography>
                         <Typography variant='h5' fontSize={'1.25rem'} color='rgb(236, 234, 234)'>Simple Steps to Connect , Contract and Cultivate Success</Typography>
+                </Box>
+                <Box sx={{
+                        width: '100%',
+                        display: 'flex',
+                        flexDirection: 'row',
+                }}>
+                <Card style={{
+                                maxWidth: 345,
+                                margin: '20px',
+                                boxShadow: '1px 2px 4px rgba(2, 2, 2, 0.2)',
+                                borderRadius: '10px',
+                                padding: '10px',
+                        }}>
+                        <Badge badgeContent={1} color='primary' style={{
+                                fontSize: 20,
+                                padding: '8px',
+                                backgroundColor: 'red',
+                                color: 'white',
+                        }}>
+                                
+                        </Badge>
+                        <CardMedia
+                                component="img"
+                                alt="Sign-in/Sing-up"
+                                width= "140"
+                                image="../../public/assets/images/sign-up-img.jpg"
+                                title="Sign-Up"
+                                style={{ objectFit: 'contain' }}
+                        />
+                        <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                Sign Up & Choose Your <br/>Role:
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                Create an account, select your role, and set up your profile.
+                                </Typography>
+                        </CardContent>
+                </Card>
                 </Box>
                 </div>
         )
