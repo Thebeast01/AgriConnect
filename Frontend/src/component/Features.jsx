@@ -40,13 +40,14 @@ const Features = () => {
                 alignItems: 'flex-start',
                 padding: '50px',
                 position: 'relative',
+
             }}>
                 <Box sx={{
                     width: '10px',
                     backgroundColor: '#39AE3E',
                     position: 'absolute',
                     left: '5%',
-                    top: 70,
+                    top: 170,
                     bottom: 70,
                 }} />
                 <div style={{
@@ -55,7 +56,10 @@ const Features = () => {
                     alignItems: 'center',
                     width: '100%',
                     marginLeft: '60px',
+                    marginTop:'50px'
                 }}>
+                        <Typography variant='h4' color='#111' fontSize={'2.5rem'} fontWeight={'bold'}>Our Key Features</Typography>
+                        <Typography variant='h6' fontSize={'1.5rem'} color='#333' align='left' marginTop={'0.5rem'}>Transforming Agriculture with Technology and Trust</Typography>
                     {featuresData.map((feature, index) => (
                         <Card
                             key={index}
