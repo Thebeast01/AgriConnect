@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 // Not completed Yet
 import Swal from 'sweetalert2';
-export const Login = () => {
+const Login = () => {
         const navigate = useNavigate()
         const [loginData, setLoginData] = useState({
                 email: '',
@@ -39,7 +39,8 @@ export const Login = () => {
                                 padding={'1rem'}
                                 boxShadow={3}
                                 borderRadius={2}
-                                sx={{ backgroundColor: 'white' }}
+                                sx={{ backgroundImage: 'linear-gradient(to right, #D7E2D8, #A3C1A5)' }}
+
                         >
                                 <Typography variant="h4" textAlign={'center'}>Login</Typography>
 
@@ -50,6 +51,7 @@ export const Login = () => {
                                         onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
                                         fullWidth
                                         margin="normal"
+                                        backgroundColor='white'
                                 />
                                 <TextField
                                         label="Password"
@@ -58,6 +60,7 @@ export const Login = () => {
                                         onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
                                         fullWidth
                                         margin="normal"
+                                        backgroundColor='white'
                                 />
                                 <Box display={'flex'} width={'100%'} justifyContent={'space-between'} marginTop={'1rem'}>
                                         <Button variant='contained' onClick={() => navigate('/register')}>Register</Button>
