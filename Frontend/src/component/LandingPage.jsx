@@ -43,8 +43,8 @@ const LandingPage = () => {
                                                         padding: '10px',
                                                         marginRight: '3rem'
                                                 }} onClick={() => navigate('/register')} >Join as Farmer</Button>
-                                                </Link>
-                                                <Link to={"/Register"}>
+
+
                                                 <Button variant='contained' sx={{
                                                         backgroundImage: 'linear-gradient(to right, #A15C1A, #875423)',
                                                         padding: '10px',
