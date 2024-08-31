@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
         const navigate = useNavigate()
-	return (
+        return (
                 <div style={{ height: '100vh' }}>
 
                         <Box
@@ -36,15 +36,17 @@ const LandingPage = () => {
 
 
                                         <Box marginTop={'2rem'} flex={1}>
+
                                                 <Button variant='contained' sx={{
                                                         backgroundImage: 'linear-gradient(to right, #35903A, #29772D)',
                                                         width: '17rem',
                                                         padding: '10px',
                                                         marginRight: '3rem'
                                                 }} onClick={() => navigate('/register')} >Join as Farmer</Button>
+                                                </Link>
+                                                <Link to={"/Register"}>
                                                 <Button variant='contained' sx={{
                                                         backgroundImage: 'linear-gradient(to right, #A15C1A, #875423)',
-
                                                         padding: '10px',
                                                         width: '17rem'
                                                 }} >Join as Buyer</Button>
@@ -56,7 +58,7 @@ const LandingPage = () => {
                         <Features />
                         <AboutUs />
                 </div>
-	);
+        );
 }
 
 
