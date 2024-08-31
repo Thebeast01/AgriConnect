@@ -8,6 +8,7 @@ import AboutUs from './component/AboutUs'
 import ContactUs from './component/ContactUs'
 import { Register } from './component/Register'
 import { auth } from './component/Firebase'
+import Features from './component/Features'
 function App() {
   const [user, setUser] = useState();
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
         <Route path="/home" element={<LandingPage />} />
+        <Route path="/aboutUs" element={<Features />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
     </Routes>
