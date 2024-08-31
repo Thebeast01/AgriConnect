@@ -2,10 +2,10 @@ import React from 'react'
 
 const Features = () => {
         return (
-                <div style={{
+                <div id='features' style={{
                         height: '100vh'
                 }}>
-
+                        Features
                 </div>
         )
 }
