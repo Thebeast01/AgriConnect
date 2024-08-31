@@ -6,7 +6,6 @@ import Image2 from '../assets/Dashboard.png';
 import Image3 from '../assets/Smart_contracts.jpg';
 import Image4 from '../assets/Logistics_Support.jpg';
 
-
 const featuresData = [
     {
         image: Image1,
@@ -32,64 +31,93 @@ const featuresData = [
 
 const Features = () => {
     return (
-        <div style={{ 
-                    height: 'fit-content',
+        <div style={{ margin: '2px' }}>
+            <div style={{
+                height: 'fit-content',
+                display: 'flex',
+                flexDirection: 'row',
+                columnGap: '0px',
+                alignItems: 'flex-start',
+                padding: '50px',
+                position: 'relative',
+            }}>
+                <Box sx={{
+                    width: '10px',
+                    backgroundColor: '#39AE3E',
+                    position: 'absolute',
+                    left: '5%',
+                    top: 70,
+                    bottom: 70,
+                }} />
+                <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    justifyContent: 'flex-start',
-                    padding: '20px' ,
-                    
+                    width: '100%',
+                    marginLeft: '60px',
                 }}>
-                        
-            {featuresData.map((feature, index) => (
-                <Card 
-                    key={index} 
-                    style={{ 
-                        marginBottom: '20px', 
-                        display: 'flex', 
-                        width: '75%',
-                        height:'fit-content',
-                        margin:'auito',
-                        flexDirection: index % 2 === 0 ? 'row' : 'row-reverse', 
-                        alignItems: 'center', 
-                        padding:'10px',
-                        border:'none',
-
-                    }}>
-                    <Box sx={{ padding: '20px' }}>
-                        <img src={feature.image} alt={feature.title} style={{ width: '25rem' }} />
-                    </Box>
-                    <CardContent 
-                    style={{
-                        margin:'1rem',
-                        padding:'20px',
-                        width:'500px'
-                    }}>
-                        <Typography variant="h5" style={{ 
-                                fontFamily: 'Roboto, sans-serif',
-                                fontSize: '24px', 
-                                fontWeight:'600',
-                                letterSpacing: '0.5px', 
-                                lineHeight: '1.2', 
-                                marginBottom: '10px', 
-                                maxWidth: '500px' }}>
-                            {feature.title}
-                        </Typography>
-                        <Typography variant="body2" style={{ 
-                                fontFamily: 'Roboto, sans-serif',
-                                fontSize: '18px', 
-                                fontWeight:'200',
-                                letterSpacing: '0.8px', 
-                                lineHeight: '1.8', 
-                                marginBottom: '10px', 
-                                maxWidth: '500px' 
+                    {featuresData.map((feature, index) => (
+                        <Card
+                            key={index}
+                            style={{
+                                marginBottom: '20px',
+                                display: 'flex',
+                                width: '90%',
+                                height: 'fit-content',
+                                margin: '20px auto',
+                                flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
+                                alignItems: 'center',
+                                padding: '20px',
+                                border: 'none',
+                                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                                borderRadius: '8px',
+                            }}>
+                            <Box sx={{
+                                padding: '10px',
+                                flex: '1 1 40%', // Flexible width to make it responsive
+                                display: 'flex',
+                                justifyContent: 'center',
+                            }}>
+                                <img src={feature.image} alt={feature.title} style={{
+                                    width: '100%',
+                                    maxWidth: '500px',
+                                    borderRadius: '8px',
+                                    objectFit: 'cover',
+                                }} />
+                            </Box>
+                            <CardContent
+                                style={{
+                                    margin: '1rem',
+                                    padding: '20px',
+                                    width: '100%',
+                                    flex: '1 1 60%', 
+                                    maxWidth: '500px',
                                 }}>
-                            {feature.description}
-                        </Typography>
-                    </CardContent>
-                </Card>
-            ))}
+                                <Typography variant="h5" style={{
+                                    fontFamily: 'Roboto, sans-serif',
+                                    fontSize: '22px',
+                                    fontWeight: '600',
+                                    letterSpacing: '0.5px',
+                                    lineHeight: '1.4',
+                                    marginBottom: '10px',
+                                }}>
+                                    {feature.title}
+                                </Typography>
+                                <Typography variant="body2" style={{
+                                    fontFamily: 'Roboto, sans-serif',
+                                    fontSize: '16px',
+                                    fontWeight: '300',
+                                    letterSpacing: '0.5px',
+                                    lineHeight: '1.6',
+                                    marginBottom: '10px',
+                                }}>
+                                    {feature.description}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }
