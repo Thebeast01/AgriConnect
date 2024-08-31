@@ -1,8 +1,14 @@
+import React from 'react';
+import { Card, CardContent, CardMedia, Badge, Box, Typography } from '@mui/material';
+import img1 from '../assets/Guaranteed_Market_access.jpg';
+import img2 from '../assets/Dashboard.png';
+import img3 from '../assets/Smart_contracts.jpg';
+import img4 from '../assets/Logistics_Support.jpg';
+import HowItWorks from './HowItWorks';
+
 const Features = () => {
     return (
-            <div style={{
-                    height: '100vh'
-            }}>
+            <div>
                     <Box 
                             sx={{
                                     width: '100vw',
@@ -34,7 +40,7 @@ const Features = () => {
                                             width: '55rem',
                                             height: '12rem',
                                             display: 'flex',
-                                            background: 'url(../../public/assets/images/communication-img.jpg)',
+                                            background: `url(${img1})`,
                                             backgroundRepeat: 'no-repeat',
                                             backgroundSize: 'contain',
                                             marginRight: '4rem',
@@ -61,7 +67,7 @@ const Features = () => {
                                     <Box sx={{
                                             width: '55rem',
                                             height: '18rem',
-                                            background: 'url(../../public/assets/images/market-img.png)',
+                                            background: `url(${img2})`,
                                             backgroundRepeat: 'no-repeat',
                                             backgroundSize: 'contain',
                                             marginRight: '4rem',
@@ -77,7 +83,7 @@ const Features = () => {
                                             width: '55rem',
                                             height: '18rem',
                                             display: 'flex',
-                                            background: 'url(../../public/assets/images/secure-payment-img.jpg)',
+                                            background: `url(${img3})`,
                                             backgroundRepeat: 'no-repeat',
                                             backgroundSize: 'contain',
                                             marginRight: '4rem',
@@ -102,57 +108,13 @@ const Features = () => {
                                     <Box sx={{
                                             width: '55rem',
                                             height: '16rem',
-                                            background: 'url(../../public/assets/images/logistic-img.jpg)',
+                                            background: `url(${img4})`,
                                             backgroundRepeat: 'no-repeat',
                                             backgroundSize: 'contain',
                                             marginTop: '-3rem'
                                     }} />
                             </Box>
-            </Box>
-            <Box sx={{
-                    width: '100%',
-                    height: '13rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgb(54, 126, 54)'
-            }}>
-                    <Typography variant='h3' fontSize={'2rem'} fontWeight={'bold'} color='#fff'>How It Works</Typography>
-                    <Typography variant='h5' fontSize={'1.25rem'} color='rgb(236, 234, 234)'>Simple Steps to Connect , Contract and Cultivate Success</Typography>
-            </Box>
-            <Box sx={{
-                    width: '100%',
-                    display: 'flex',
-                    flexDirection: 'row',
-            }}>
-            <Card style={{
-                            maxWidth: 345,
-                            margin: '20px',
-                            boxShadow: '1px 2px 4px rgba(2, 2, 2, 0.2)',
-                            borderRadius: '10px',
-                            padding: '10px',
-                    }}>
-                    <Badge badgeContent={1} color="primary" overlap="circle">
-                    </Badge>
-                    <CardMedia
-                            component="img"
-                            alt="Sign-in/Sing-up"
-                            width= "140"
-                            image="../../public/assets/images/sign-up-img.jpg"
-                            title="Sign-Up"
-                            style={{ objectFit: 'contain' }}
-                    />
-                    <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
-                            Sign Up & Choose Your <br/>Role:
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                            Create an account, select your role, and set up your profile.
-                            </Typography>
-                    </CardContent>
-            </Card>
-            </Box>
+            </Box>           
             </div>
     )
 }

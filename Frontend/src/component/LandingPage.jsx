@@ -3,6 +3,8 @@ import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Features from './Features';
 import { Link } from 'react-router-dom';
+import bg1 from '../assets/background-img3.jpg';
+import HowItWorks from './HowItWorks';
 function LandingPage() {
 	return (
                 <div style={{ height: '100vh' }}>
@@ -16,7 +18,7 @@ function LandingPage() {
                                         width: '100vw',
                                         height: '80vh',
                                         flex: 1,
-                                        backgroundImage: 'url(../../public/assets/images/background-img3.jpg)',
+                                        backgroundImage: `url(${bg1})`,
                                         backgroundRepeat: 'no-repeat',
                                         backgroundSize: 'cover',
                                 }}
@@ -50,7 +52,8 @@ function LandingPage() {
                                 </Box>
                         </Box>
                         <Features />
-                        <AboutUs />
+                        <HowItWorks />
+                        {/* <AboutUs /> */}
                 </div>
         );
 }
