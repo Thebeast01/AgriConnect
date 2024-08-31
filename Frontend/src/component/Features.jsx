@@ -37,10 +37,11 @@ const Features = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    justifyContent: 'center',
+                    justifyContent: 'flex-start',
                     padding: '20px' ,
                     
                 }}>
+                        
             {featuresData.map((feature, index) => (
                 <Card 
                     key={index} 
@@ -52,7 +53,9 @@ const Features = () => {
                         margin:'auito',
                         flexDirection: index % 2 === 0 ? 'row' : 'row-reverse', 
                         alignItems: 'center', 
-                        padding:'10px'
+                        padding:'10px',
+                        border:'none',
+
                     }}>
                     <Box sx={{ padding: '20px' }}>
                         <img src={feature.image} alt={feature.title} style={{ width: '25rem' }} />
