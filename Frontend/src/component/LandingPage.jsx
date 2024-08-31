@@ -53,7 +53,7 @@ function LandingPage() {
                         </Box>
                         <Features />
                         <HowItWorks />
-                        {/* <AboutUs /> */}
+                        <AboutUs />
                 </div>
         );
 }

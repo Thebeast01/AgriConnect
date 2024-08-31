@@ -54,10 +54,10 @@ const HowItWorks = () => {
                             flexDirection: 'row',
                             justifyContent: 'space-between',
                             mt: '-1.5rem',
-                            mb: '4rem'      // added to see the  bottom shadow feel free to remove it
+                            mb: '10rem'
                     }}>
                     <Card style={{ 
-                            width: '250px',
+                            width: '270px',
                             margin: '0 2rem',
                             padding: '1rem' ,
                             position: 'relative',
@@ -72,7 +72,7 @@ const HowItWorks = () => {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 position: 'absolute',
-                                top: '-35px',
+                                top: '-32px',
                                 left: '50%',
                                 transform: 'translateX(-50%)',
                                 backgroundColor: '#fff',
@@ -106,7 +106,7 @@ const HowItWorks = () => {
                                 height= "210"
                                 objectFit= "contain"
                                 sx={{
-                                    marginTop: "0.5rem"
+                                    marginTop: '1rem'
                                 }}
                               
                             />
@@ -129,7 +129,7 @@ const HowItWorks = () => {
                     </Card>
 
                     <Card style={{ 
-                            width: '250px',
+                            width: '270px',
                             margin: '0 2rem',
                             padding: '1rem' ,
                             position: 'relative',
@@ -144,7 +144,7 @@ const HowItWorks = () => {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 position: 'absolute',
-                                top: '-35px',
+                                top: '-32px',
                                 left: '50%',
                                 transform: 'translateX(-50%)',
                                 backgroundColor: '#fff',
@@ -178,7 +178,7 @@ const HowItWorks = () => {
                                 height= '210'
                                 objectFit= 'contain'
                                 sx={{
-                                    marginTop: '0.3rem'
+                                    marginTop: '1rem'
                                 }}
                               
                             />
@@ -200,7 +200,7 @@ const HowItWorks = () => {
                             </CardContent>
                     </Card>
                     <Card style={{ 
-                            width: '250px',
+                            width: '270px',
                             margin: '0 2rem',
                             padding: '1rem' ,
                             position: 'relative',
@@ -215,7 +215,7 @@ const HowItWorks = () => {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 position: 'absolute',
-                                top: '-35px',
+                                top: '-32px',
                                 left: '50%',
                                 transform: 'translateX(-50%)',
                                 backgroundColor: '#fff',
@@ -249,7 +249,7 @@ const HowItWorks = () => {
                                 height= '210'
                                 objectFit= 'contain'
                                 sx={{
-                                    marginTop: '0.8rem'
+                                    marginTop: '1rem'
                                 }}
                               
                             />
@@ -271,7 +271,7 @@ const HowItWorks = () => {
                             </CardContent>
                     </Card>
                     <Card style={{ 
-                            width: '250px',
+                            width: '270px',
                             margin: '0 2rem',
                             padding: '1rem' ,
                             position: 'relative',
@@ -286,7 +286,7 @@ const HowItWorks = () => {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 position: 'absolute',
-                                top: '-35px',
+                                top: '-32px',
                                 left: '50%',
                                 transform: 'translateX(-50%)',
                                 backgroundColor: '#fff',
@@ -320,7 +320,7 @@ const HowItWorks = () => {
                                 height= '210'
                                 objectFit= 'contain'
                                 sx={{
-                                    marginTop: '0.8rem'
+                                    marginTop: '1rem'
                                 }}
                               
                             />
