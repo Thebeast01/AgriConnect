@@ -1,4 +1,4 @@
 export const Colors = {
-	dasboardBackground: '#D9D9D9',
+	dasboardBackground: '#E0E0E0',
 	text1: '#808080',
 };
