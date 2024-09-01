@@ -8,7 +8,14 @@ import AboutUs from './component/AboutUs'
 import ContactUs from './component/ContactUs'
 import Register from './component/Register'
 import Features from './component/Features'
+import { auth } from './component/Firebase'
 function App() {
+  const [user, setUser] = useState();
+  useEffect(() => {
+    auth.onAuthStateChanged(user => {
+      setUser(user)
+    })
+  })
 
 
   return (
