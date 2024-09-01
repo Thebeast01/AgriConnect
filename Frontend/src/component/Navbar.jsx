@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
-import logo from '../../public/assets/icons/AgreeConnect.png';
+import logo from '../assets/AgreeConnect.png';
 import zIndex from '@mui/material/styles/zIndex';
 const Navbar = () => {
 
