@@ -60,20 +60,17 @@ function LandingPage() {
                                 backgroundColor: '#4CAF50',
                                 display: 'flex',
                                 justifyContent: 'center',
-                                // alignItems: 'center',
                                 mb: '4rem',
                         }} >
                                <Box sx={{
                                 width: '100%',
                                 height: '30rem',
-                                // backgroundColor: 'red',
                                 padding: '2rem',
                                 mt: '3rem',
                                }}>
                                 <Box sx={{
                                         width: '100%',
                                         height: '15rem',
-                                        // backgroundColor: 'blue',
                                         display: 'grid',
                                         gridTemplateColumns: 'repeat(4,1fr)',
                                         columnGap: '1rem',
