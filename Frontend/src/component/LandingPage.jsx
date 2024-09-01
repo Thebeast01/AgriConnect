@@ -2,6 +2,7 @@ import { Box, Typography, Button } from '@mui/material'
 import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Features from './Features';
+import heroImage from '../assets/hero.png';
 import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
@@ -18,7 +19,7 @@ const LandingPage = () => {
                                         width: '100vw',
                                         height: '80vh',
                                         flex: 1,
-                                        backgroundImage: 'url(../assets/hero.png)',
+                                        backgroundImage: `url(${heroImage})`,
                                         backgroundRepeat: 'no-repeat',
                                         backgroundSize: 'cover',
                                 }}
