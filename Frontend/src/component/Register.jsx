@@ -144,7 +144,7 @@ const Register = () => {
                                                 margin="normal"
                                         />
                                         <Box display={'flex'} width={'100%'} justifyContent={'space-between'} marginTop={'1rem'}>
-                                                <Button variant='contained' onClick={() => navigate('/register')}>Skip</Button>
+                                                <Button variant='contained' onClick={() => navigate('/dashboard')}>Skip</Button>
                                                 <Button variant='contained' color='warning' onClick={handleSignup}>Register</Button>
                                         </Box>
 
