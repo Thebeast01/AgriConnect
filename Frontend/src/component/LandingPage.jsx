@@ -18,7 +18,7 @@ const LandingPage = () => {
                                         width: '100vw',
                                         height: '80vh',
                                         flex: 1,
-                                        backgroundImage: 'url(../../public/assets/images/background-img3.jpg)',
+                                        backgroundImage: 'url(../assets/hero.png)',
                                         backgroundRepeat: 'no-repeat',
                                         backgroundSize: 'cover',
                                 }}
