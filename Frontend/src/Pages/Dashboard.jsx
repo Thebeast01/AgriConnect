@@ -6,6 +6,7 @@ import OIP from '../assets/profile.png'
 import Plus from '../assets/plus.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import LineGraph from '../component/LineGraph';
 const Dashboard = () => {
   const [cropsData, setCropsData] = useState([
     {
@@ -20,6 +21,7 @@ const Dashboard = () => {
     // Handle adding more crops data
     setCropsData([...cropsData, { /* New crop data */ }]);
   };
+
   return (
     <Container maxWidth="xl" display={'flex'} sx={{
       height:
@@ -218,6 +220,43 @@ const Dashboard = () => {
           </Grid>
         </Grid>
       </Box>
+      <Box sx={{
+
+        width: '100%',
+        backgroundColor: Colors.dasboardBackground,
+        marginTop: 15,
+        borderRadius: 5,
+        padding: 5
+
+      }}>
+        <Box sx={{
+          height: '500px',
+          width: '100%',
+          backgroundColor: 'white',
+          display: 'flex',
+          justifyContent: 'center',
+        }}>
+          <Typography variant='h3' sx={{ position: 'absolute', left: 240, fontWeight: 'bold', padding: 2, color: '#1C7690', }}>$27.6k</Typography>
+          <LineGraph />
+        </Box>
+        <Box sx={{
+
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          gap: '1rem',
+          marginTop: '2rem',
+          marginBottom: '2rem'
+        }}>
+          <Box sx={{ backgroundColor: 'white', height: '400px', borderRadius: 5, width: '100%' }} >
+
+          </Box>
+          <Box sx={{ backgroundColor: 'white', width: '100%', height: '400px', borderRadius: 5 }}>
+            <p style={{ padding: '30px', fontWeight: 'bold', fontSize: '20px'  }}>Your Pie Chart</p>
+          </Box>
+        </Box>
+      </Box>
+
     </Container >
   )
 }
