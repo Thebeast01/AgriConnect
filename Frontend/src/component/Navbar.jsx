@@ -1,57 +1,76 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 
-import { AppBar, Toolbar, Typography, Button, Box, Link } from '@mui/material';
-
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { NavLink } from 'react-router-dom';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import { AppBar, Toolbar, Link } from '@mui/material';
 
 import logo from '../../public/assets/icons/AgreeConnect.png';
+import zIndex from '@mui/material/styles/zIndex';
 const Navbar = () => {
+
         return (
-        <AppBar
-                position='static'
-                sx={{
-                        backgroundColor: 'white',
-                         boxShadow: 'none',
-                }}
-        >
-                <Toolbar
+                <AppBar
+                        position='static'
                         sx={{
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                                alignItems: 'center',
+                                backgroundColor: 'white',
+                                boxShadow: 'none',
                         }}
                 >
-                        <img src={logo} alt='AgreeConnect' style={{ width: '100px', height: '100px' }} />
-                        <div
-                                style={{
-                                        width: '50%',
+                        <Box
+                                sx={{
                                         display: 'flex',
-                                        justifyContent: 'space-around',
+                                        justifyContent: 'space-between',
                                         alignItems: 'center',
-                                                fontSize: '18px',
-
                                 }}
                         >
-                                        <Link to='/home' underline='hover' color='black' >
-                                        Home
-                                </Link>
-                                        <Link href='#Features' underline='hover' color='black'>
-                                        Features
-                                </Link>
-                                        <Link href='#how-it-works' underline='hover' color='black'>
-                                        How It Works
-                                </Link>
+                                <img src={logo} alt='AgreeConnect' style={{ width: '100px', height: '100px' }} />
+                                <div
+                                        style={{
+                                                width: '50%',
+                                                display: 'flex',
+                                                justifyContent: 'space-around',
+                                                alignItems: 'center',
+                                                fontSize: '18px',
 
-                                        <Link href='#aboutUs' underline='hover' color='black'>
-                                        About Us
-                                </Link>
+                                        }}
+                                >
+                                        <NavLink to='home' underline='hover' color='black' >
+                                                Home
+                                        </NavLink>
+                                        <Link to="feature"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}
+                                                style={{ cursor: "pointer", color: " black" }}
 
-                                        <Link href='#contactUs' underline='hover' color='black'>
-                                        Contact Us
-                                </Link>
-                        </div>
-                </Toolbar>
-        </AppBar>
+
+                                        >Features</Link>
+                                        <Link to="how-it-works" spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}
+                                                style={{ cursor: "pointer", color: " black" }}
+
+                                        >How It Works</Link>
+                                        <Link to="about" spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}
+                                                style={{ cursor: "pointer", color: " black" }}
+
+                                        >About Us</Link>
+                                        <Link to="contact" spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}
+                                                style={{ cursor: "pointer", color: " black" }}
+
+                                        >Contact Us</Link>
+                                </div>
+                        </Box>
+                </AppBar>
         )
 }
 
