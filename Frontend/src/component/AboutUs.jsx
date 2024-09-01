@@ -27,6 +27,7 @@ const AboutUs = () => {
                         display: 'flex',
                         flexDirection: 'row',
                         padding: '0 2rem',
+                        mb: '5rem'
                 }}>
                         <Box sx={{
                                 flex: 1,
@@ -40,7 +41,7 @@ const AboutUs = () => {
                        <Box sx={{
                         flex: 1,
                         }}>
-                        <Typography variant="body1" color="textprimary" component="p"
+                        <Typography variant="body1" color="textSecondary" component="p"
                         sx={{ 
                                 fontSize: '1.2rem',
                         }}>

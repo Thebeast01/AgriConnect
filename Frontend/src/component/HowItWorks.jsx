@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container,Typography, CardMedia, CardContent, Box, Card } from '@mui/material';
-import img5 from '../assets/background_bg1.png';
-import img6 from '../assets/bg1.png';
-import img7 from '../assets/sign-up-img.jpg';
-import img8 from '../assets/explore-img.jpg';
-import img9 from '../assets/negotiate-img.jpg';
-import img10 from '../assets/manage-img.jpg';
+import img1 from '../assets/background_bg1.png';
+import img2 from '../assets/bg1.png';
+import img3 from '../assets/sign-up-img.jpg';
+import img4 from '../assets/explore-img.jpg';
+import img5 from '../assets/negotiate-img.jpg';
+import img6 from '../assets/manage-img.jpg';
 
 const HowItWorks = () => {
   return (
@@ -16,7 +16,7 @@ const HowItWorks = () => {
                 <Box sx={{
                         width: '100%',
                         height: '10rem',
-                        background: `url(${img5})`,
+                        background: `url(${img1})`,
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
                         position: 'relative',
@@ -25,7 +25,7 @@ const HowItWorks = () => {
                     <Box sx={{
                         width: '27rem',
                         height: '25rem',
-                        background: `url(${img6})`,
+                        background: `url(${img2})`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         position: 'absolute',
@@ -37,13 +37,13 @@ const HowItWorks = () => {
             </Box>
             <Box sx={{
                     width: '100%',
-                    height: '12rem',
+                    height: '10rem',
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center',
                     alignItems: 'center',
                     background: '#64C267',
                     border: 'none',
+                    padding: '1rem 0',
                     }}>
                     <Typography variant='h3' fontSize={'2rem'} fontWeight={'bold'} color='#fff'>How It Works</Typography>
                     <Typography variant='h5' fontSize={'1.25rem'} color='rgb(236, 234, 234)'>Simple Steps to Connect , Contract and Cultivate Success</Typography>
@@ -53,7 +53,7 @@ const HowItWorks = () => {
                             display: 'flex',
                             flexDirection: 'row',
                             justifyContent: 'space-between',
-                            mt: '-1.5rem',
+                            mt: '-2.5rem',
                             mb: '10rem'
                     }}>
                     <Card style={{ 
@@ -101,7 +101,7 @@ const HowItWorks = () => {
                             </Box>
                             <CardMedia
                                 component="img"
-                                image={img7}
+                                image={img3}
                                 alt="sign-up"
                                 height= "210"
                                 objectFit= "contain"
@@ -173,7 +173,7 @@ const HowItWorks = () => {
                             </Box>
                             <CardMedia
                                 component="img"
-                                image={img8}
+                                image={img4}
                                 alt="Explore & Connect"
                                 height= '210'
                                 objectFit= 'contain'
@@ -244,7 +244,7 @@ const HowItWorks = () => {
                             </Box>
                             <CardMedia
                                 component="img"
-                                image={img9}
+                                image={img5}
                                 alt="Negotiate & Finalize"
                                 height= '210'
                                 objectFit= 'contain'
@@ -315,7 +315,7 @@ const HowItWorks = () => {
                             </Box>
                             <CardMedia
                                 component="img"
-                                image={img10}
+                                image={img6}
                                 alt="Manage & Monitor"
                                 height= '210'
                                 objectFit= 'contain'
