@@ -3,7 +3,6 @@ import React, { useReducer } from 'react'
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import { AppBar, Toolbar, Link } from '@mui/material';
 
 import logo from '../../public/assets/icons/AgreeConnect.png';
 import zIndex from '@mui/material/styles/zIndex';
