@@ -19,7 +19,9 @@
 		"@fortawesome/react-fontawesome": "^0.2.2",
 		"@mui/icons-material": "^6.0.1",
 		"@mui/material": "^6.0.1",
+		"@mui/styled-engine-sc": "^6.0.1",
 		"@mui/styles": "^6.0.0",
+		"@mui/x-charts": "^7.15.0",
 		"@mui/x-date-pickers": "^7.15.0",
 		"dayjs": "^1.11.13",
 		"firebase": "^10.13.1",
@@ -27,6 +29,8 @@
 		"react-dom": "^18.3.1",
 		"react-router-dom": "^6.26.1",
 		"react-scroll": "^1.9.0",
+		"recharts": "^2.12.7",
+		"styled-components": "^6.1.13",
 		"sweetalert2": "^11.12.4"
 	},
 	"devDependencies": {

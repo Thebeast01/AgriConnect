@@ -96,13 +96,7 @@ const Register = () => {
                                                         fullWidth
 
                                                 />
-                                                <LocalizationProvider dateAdapter={AdapterDayjs} width={'100%'}>
-
-                                                        <DatePicker label={'Date of Birth'} onChange={(e) =>
-                                                                setDateValue(dayjs(e))
-                                                        }
-                                                        />
-                                                </LocalizationProvider></Box>
+                                        </Box>
 
 
                                         <Box display={'flex'} gap={'1rem'}>
@@ -144,8 +138,8 @@ const Register = () => {
                                                 margin="normal"
                                         />
                                         <Box display={'flex'} width={'100%'} justifyContent={'space-between'} marginTop={'1rem'}>
-                                                <Button variant='contained' onClick={() => navigate('/register')}>Skip</Button>
-                                                <Button variant='contained' color='warning' onClick={handleSignup}>Register</Button>
+                                                <Button variant='contained' sx={{ width: '7rem' }} onClick={() => navigate('/login')}>Login</Button>
+                                                <Button variant='contained' color='warning' onClick={handleSignup}>Submit</Button>
                                         </Box>
 
                                 </Box >

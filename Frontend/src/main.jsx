@@ -7,6 +7,7 @@ import Layout from './outlet.jsx'
 import LandingPage from './component/LandingPage.jsx'
 import Register from './component/Register.jsx'
 import Dashboard from './Pages/Dashboard.jsx'
+import Login from './component/Login.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -22,6 +23,9 @@ const router = createBrowserRouter([
       }, {
         path: 'dashboard',
         element: <Dashboard />
+      }, {
+        path: 'login',
+        element: <Login />
       }
     ]
   }
