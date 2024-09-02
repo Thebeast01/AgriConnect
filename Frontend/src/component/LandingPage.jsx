@@ -2,6 +2,7 @@ import { Box, Typography, Button } from '@mui/material'
 import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Features from './Features';
+import HowItWorks from './HowItWorks';
 import heroImage from '../assets/hero.png';
 import { useNavigate } from 'react-router-dom';
 
@@ -53,6 +54,7 @@ const LandingPage = () => {
                                 </Box>
                         </Box>
                         <Features />
+                        <HowItWorks/>
                         <AboutUs />
                 </div>
         );
