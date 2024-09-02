@@ -12,16 +12,18 @@ import {
         ListItem,
         ListItemAvatar,
         ListItemText,
+        Modal,
         TextField,
         Typography,
 } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCaretDown, faPhone, faPaperclip } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faCaretDown, faPhone, faPaperclip, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { Colors } from '../Colors';
 import Ai from '../assets/ai.png';
 const ChatInterface = () => {
+        const [isOpen, setIsOpen] = useState(false);
         const data = [
                 {
                         image: '',
@@ -53,9 +55,17 @@ const ChatInterface = () => {
                         name: 'Doe',
                 },
         ];
-
+        const handleOpen = () => {
+                setIsOpen(true);
+        }
+        const handleClose = () => {
+                setIsOpen(false);
+        }
         return (
                 <Container maxWidth={'xl'} sx={{ backgroundColor: '#E5EBE6', borderRadius: 5, overflow: 'hidden', padding: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
+
+
                         <Grid container sx={{ marginTop: '20px', height: '100%', display: 'flex ', gap: 2 }}>
                                 <Grid
                                         item
@@ -246,7 +256,9 @@ const ChatInterface = () => {
                                                 padding: 1,
                                         }}>
                                                 <div style={{ backgroundColor: 'white', padding: '10px', borderRadius: '10px' }}>  <FontAwesomeIcon icon={faPaperclip} size='xl' /></div>
-                                                <Button variant='contained' sx={{ backgroundColor: 'white', color: 'black', }}>Custom Offer</Button>
+                                                <Button variant='contained' sx={{ backgroundColor: 'white', color: 'black', }}
+                                                        onClick={handleOpen}>Custom Offer</Button>
+
                                         </Box>
                                 </Grid>
 
@@ -269,6 +281,38 @@ const ChatInterface = () => {
                                         </Card>
                                 </Grid>
                         </Grid>
+                        <Modal
+                                open={isOpen}
+                                onClose={handleClose}
+                                aria-labelledby='modal-modal-title'
+                                aria-describedby='modal-modal-description'
+                                sx={{
+                                        height: '100%',
+                                        width: '100%',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center'
+                                }}
+                        >
+                                <Box sx={{ backgroundColor: 'white', borderRadius: 5, padding: 2, display: 'flex', flexDirection: 'column', gap: 4, width: '400px' }}>
+                                        <Box display={'flex'} flexDirection={'column'} >
+                                                <Typography fontWeight={300} fontSize={18}>Quantity</Typography>
+                                                <TextField variant='outlined' label='Enter Your Offer' />
+                                        </Box>
+                                        <Box display={'flex'} flexDirection={'column'} >
+                                                <Typography fontWeight={300} fontSize={18}>Price</Typography>
+                                                <TextField variant='outlined' label='Enter Your Price' />
+                                        </Box>
+                                        <Box display={'flex'} flexDirection={'column'} >
+                                                <Typography fontWeight={300} fontSize={18}>Delivery Date</Typography>
+                                                <TextField variant='outlined' label='Enter Date' />
+                                        </Box>
+
+                                        <Button variant='contained' sx={{ backgroundColor: '#2D8C31', display: 'flex', gap: 2 }}>Submit
+                                                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                        </Button>
+                                </Box>
+                        </Modal>
                 </Container>
         );
 };
