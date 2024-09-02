@@ -8,6 +8,7 @@ import LandingPage from './component/LandingPage.jsx'
 import Register from './component/Register.jsx'
 import Dashboard from './Pages/Dashboard.jsx'
 import Login from './component/Login.jsx'
+import ChatInterface from './Pages/ChatInterface.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -26,7 +27,10 @@ const router = createBrowserRouter([
       }, {
         path: 'login',
         element: <Login />
-      }
+      }, {
+        path: 'chat',
+        element: <ChatInterface />
+      },
     ]
   }
 ])
