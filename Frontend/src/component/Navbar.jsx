@@ -46,7 +46,7 @@ const Navbar = () => {
 
 
                                         >Features</Link>
-                                        <Link to="how-it-works" spy={true}
+                                        <Link to="HowItWorks" spy={true}
                                                 smooth={true}
                                                 offset={-70}
                                                 duration={500}
