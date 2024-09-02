@@ -20,6 +20,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCaretDown, faPhone, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { Colors } from '../Colors';
+import Ai from '../assets/ai.png';
 const ChatInterface = () => {
         const data = [
                 {
@@ -208,20 +209,21 @@ const ChatInterface = () => {
 
 
                                         }}>
-                                                <Card sx={{ borderRadius: 4, display: 'flex', alignItems: 'center' }}>
-                                                        <CardContent>AI Dynamic Price Suggestion</CardContent>
 
-                                                </Card>
-                                                <Card sx={{ borderRadius: 4 }}>
-                                                        <CardContent >
-                                                                <Typography>
+
+                                                <Card sx={{ borderRadius: 4, width: '100%' }}>
+                                                        <Typography textAlign={'center'} marginTop={1} display={'flex'} alignItems={'center'} justifyContent={'center'} gap={1}>
+                                                                <img src={Ai} alt="" />
+                                                                Ai Dynamic Price Suggestion</Typography>
+                                                        <CardContent sx={{ fontWeight: 'bold' }}>
+                                                                <Typography sx={{ fontWeight: 'bold' }}>
                                                                         Trending Market Price of the Crop:
 
+                                                                </Typography >
+                                                                <Typography sx={{ fontWeight: 'bold' }}>
+                                                                        MSP of the Crop:
                                                                 </Typography>
-                                                                <Typography>
-                                                                        MSP of the Crop: Lorem ipsum dolor, sit amet consectetur
-                                                                </Typography>
-                                                                <Typography>
+                                                                <Typography sx={{ fontWeight: 'bold' }}>
                                                                         AI Suggestion :
                                                                 </Typography>
 
