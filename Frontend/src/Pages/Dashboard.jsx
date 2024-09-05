@@ -7,6 +7,7 @@ import Plus from '../assets/plus.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import LineGraph from '../component/LineGraph';
+import CarouselComponent from '../component/UI/Carousel';
 const Dashboard = () => {
   const [cropsData, setCropsData] = useState([
     {
@@ -14,7 +15,19 @@ const Dashboard = () => {
       price: '40 Rs/kg',
       quantity: '600 kg',
       image: 'path/to/your/image.jpg' // Replace with the actual path to your image
-    }
+    },
+    {
+      name: 'XYZ Company',
+      price: '40 Rs/kg',
+      quantity: '600 kg',
+      image: 'path/to/your/image.jpg' // Replace with the actual path to your image
+    },
+    {
+      name: 'XYZ Company',
+      price: '40 Rs/kg',
+      quantity: '600 kg',
+      image: 'path/to/your/image.jpg' // Replace with the actual path to your image
+    },
   ]);
 
   const handleAddMore = () => {
@@ -123,7 +136,7 @@ const Dashboard = () => {
                 flexDirection: 'row',
                 gap: '1rem',
               }}>
-              <Card sx={
+              {/* <Card sx={
                 {
                   height: '300px',
                   width: '300px',
@@ -138,8 +151,9 @@ const Dashboard = () => {
                 <Skeleton variant="rectangular" width={260} height={200} />
                 <Typography>Price : 40Rs/kg</Typography>
                 <Typography>Quantity upto : 600kg</Typography>
-              </Card>
-              <Card sx={
+              </Card> */}
+              <CarouselComponent />
+              {/* <Card sx={
                 {
                   height: '300px',
                   width: '300px',
@@ -165,7 +179,7 @@ const Dashboard = () => {
                 }>
                   <FontAwesomeIcon icon={faPlus} fontSize={'4rem'} />
                 </Box>
-            </Card>
+            </Card> */}
           </Grid>
           </Grid>
 
@@ -175,14 +189,28 @@ const Dashboard = () => {
                 backgroundColor: Colors.dasboardBackground,
                 borderRadius: '2rem',
                 boxShadow: 3,
-                padding: '2rem'
+                padding: '2rem',
+
               }
             }>
             <Typography variant="h4">Current Contracts</Typography>
-            <Grid item xs={12}>
+            <Grid container flexDirection={'column'} xs={12} sx={{
+              display: 'flex',
+              height: 250,
+              overflowY: 'scroll',
+              scrollBehavior: 'smooth',
+              scrollbarWidth: 'none',
+
+
+            }} >
+              <Grid item xs={12}>
               {cropsData.map((crop, index) => (
+
+
                 <Card key={index} sx={{
                   borderRadius: '1rem',
+                  height: '200',
+                  marginBottom: 3
                 }}>
                   <CardHeader
                     title="Buyer's Name: XYZ Company"
@@ -216,6 +244,7 @@ const Dashboard = () => {
                   </CardActions>
                 </Card>
               ))}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
