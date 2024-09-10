@@ -1,15 +1,14 @@
-import { Box, Typography, Button } from '@mui/material'
-import Navbar from './Navbar';
-import AboutUs from './AboutUs';
-import Features from './Features';
-import HowItWorks from './HowItWorks';
-import heroImage from '../assets/hero.png';
+import { Container, Box, Typography, Button } from '@mui/material'
+import Navbar from '../component/Navbar';
+import heroImage from '../assets/HeroPng.png';
+import AboutUs from '../component/AboutUs';
+import Features from '../component/Features';
 import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
         const navigate = useNavigate()
         return (
-                <div style={{ height: '100%' }}>
+                <div style={{ height: '100vh' }}>
 
                         <Box
                                 sx={{
@@ -17,20 +16,21 @@ const LandingPage = () => {
                                         flexDirection: 'column',
                                         justifyContent: 'center',
                                         alignItems: 'baseline',
-                                        width: '100vw',
+                                        width: '100%',
                                         height: '80vh',
                                         flex: 1,
                                         backgroundImage: `url(${heroImage})`,
                                         backgroundRepeat: 'no-repeat',
-                                        backgroundSize: 'cover',
+                                        backgroundSize: 'cover'
+
                                 }}
                         >
                                 <Box sx={{
                                         marginLeft: '10rem',
-                                }}><Typography variant='h3' color='#fff'>
+                                }}><Typography variant='h3' color='white'>
                                                 Empowering Farmers with Guaranteed <br />Market Access.
                                         </Typography>
-                                        <Typography variant='h5' align='left' color='#fff' marginTop={'1rem'} fontSize={'22px'} >
+                                        <Typography variant='h5' align='left' color='white' marginTop={'1rem'} fontSize={'22px'} >
                                                 Streamline your farming business with contract <br /> farming, AI-driven pricing, and transparent <br />transactions
                                         </Typography>
 
@@ -52,9 +52,10 @@ const LandingPage = () => {
                                                 }} >Join as Buyer</Button>
                                         </Box>
                                 </Box>
+
+
                         </Box>
                         <Features />
-                        <HowItWorks/>
                         <AboutUs />
                 </div>
         );

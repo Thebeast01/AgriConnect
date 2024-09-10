@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Box, Radio, RadioGroup, FormControlLabel, Container, TextField, Typography, createTheme, ThemeProvider, FormControl, FormLabel } from '@mui/material';
-import { auth, db } from './Firebase';
+import { auth, db } from '../../component/Firebase';
 import { useNavigate } from 'react-router-dom';
 // Not completed Yet
 import { createUserWithEmailAndPassword } from 'firebase/auth';

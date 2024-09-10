@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Box, Container, TextField, Typography } from '@mui/material';
-import { auth } from './Firebase';
+import { auth } from '../../component/Firebase';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 // Not completed Yet

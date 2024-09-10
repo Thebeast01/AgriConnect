@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Box, Button, Container, Typography, Card, CardContent, Grid, CardHeader, CardMedia, CardActions, TextField, IconButton, Skeleton } from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { Colors } from '../Colors';
-import OIP from '../assets/profile.png'
-import Plus from '../assets/plus.png'
+import { Colors } from '../../Colors';
+import OIP from '../../assets/profile.png'
+import Plus from '../../assets/plus.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import LineGraph from '../component/LineGraph';
+import LineGraph from '../../component/LineGraph';
+import CarouselComponent from '../../component/UI/Carousel';
 const Dashboard = () => {
   const [cropsData, setCropsData] = useState([
     {
@@ -14,7 +15,19 @@ const Dashboard = () => {
       price: '40 Rs/kg',
       quantity: '600 kg',
       image: 'path/to/your/image.jpg' // Replace with the actual path to your image
-    }
+    },
+    {
+      name: 'XYZ Company',
+      price: '40 Rs/kg',
+      quantity: '600 kg',
+      image: 'path/to/your/image.jpg' // Replace with the actual path to your image
+    },
+    {
+      name: 'XYZ Company',
+      price: '40 Rs/kg',
+      quantity: '600 kg',
+      image: 'path/to/your/image.jpg' // Replace with the actual path to your image
+    },
   ]);
 
   const handleAddMore = () => {
@@ -54,7 +67,7 @@ const Dashboard = () => {
                 alignItems: 'center',
 
               }}>
-              <img src={OIP} />
+                <img src={OIP} />
                 <Typography fontWeight={'bold'} variant='h5' marginTop={'1rem'}>User Name</Typography>
                 <Typography fontWeight={'bold'} variant='h6' color={Colors.text1}>@UserID</Typography>
               </Box>
@@ -123,7 +136,7 @@ const Dashboard = () => {
                 flexDirection: 'row',
                 gap: '1rem',
               }}>
-              <Card sx={
+              {/* <Card sx={
                 {
                   height: '300px',
                   width: '300px',
@@ -138,8 +151,9 @@ const Dashboard = () => {
                 <Skeleton variant="rectangular" width={260} height={200} />
                 <Typography>Price : 40Rs/kg</Typography>
                 <Typography>Quantity upto : 600kg</Typography>
-              </Card>
-              <Card sx={
+              </Card> */}
+              <CarouselComponent />
+              {/* <Card sx={
                 {
                   height: '300px',
                   width: '300px',
@@ -165,8 +179,8 @@ const Dashboard = () => {
                 }>
                   <FontAwesomeIcon icon={faPlus} fontSize={'4rem'} />
                 </Box>
-            </Card>
-          </Grid>
+            </Card> */}
+            </Grid>
           </Grid>
 
           <Grid container spacing={2}
@@ -175,47 +189,62 @@ const Dashboard = () => {
                 backgroundColor: Colors.dasboardBackground,
                 borderRadius: '2rem',
                 boxShadow: 3,
-                padding: '2rem'
+                padding: '2rem',
+
               }
             }>
             <Typography variant="h4">Current Contracts</Typography>
-            <Grid item xs={12}>
-              {cropsData.map((crop, index) => (
-                <Card key={index} sx={{
-                  borderRadius: '1rem',
-                }}>
-                  <CardHeader
-                    title="Buyer's Name: XYZ Company"
-                    subheader="Crop Name: ABC"
-                  />
-                  <CardContent>
-                    <Grid container spacing={2}>
-                      <Grid item xs={6}>
-                        <Typography variant="body2">
-                          Crop Price: 30rs/Kg
-                        </Typography>
-                        <Typography variant="body2">
-                          Start Date: 16/11/2024
-                        </Typography>
+            <Grid container flexDirection={'column'} xs={12} sx={{
+              display: 'flex',
+              height: 250,
+              overflowY: 'scroll',
+              scrollBehavior: 'smooth',
+              scrollbarWidth: 'none',
+
+
+            }} >
+              <Grid item xs={12}>
+                {cropsData.map((crop, index) => (
+
+
+                  <Card key={index} sx={{
+                    borderRadius: '1rem',
+                    height: '200',
+                    marginBottom: 3
+                  }}>
+                    <CardHeader
+                      title="Buyer's Name: XYZ Company"
+                      subheader="Crop Name: ABC"
+                    />
+                    <CardContent>
+                      <Grid container spacing={2}>
+                        <Grid item xs={6}>
+                          <Typography variant="body2">
+                            Crop Price: 30rs/Kg
+                          </Typography>
+                          <Typography variant="body2">
+                            Start Date: 16/11/2024
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          <Typography variant="body2">
+                            Quantity: 500kg
+                          </Typography>
+                          <Typography variant="body2">
+                            Due Date: 16/11/2024
+                          </Typography>
+                        </Grid>
                       </Grid>
-                      <Grid item xs={6}>
-                        <Typography variant="body2">
-                          Quantity: 500kg
-                        </Typography>
-                        <Typography variant="body2">
-                          Due Date: 16/11/2024
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                    <Typography variant="body2">
-                      Total: 1,50,000/- Rs
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">View More</Button>
-                  </CardActions>
-                </Card>
-              ))}
+                      <Typography variant="body2">
+                        Total: 1,50,000/- Rs
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small">View More</Button>
+                    </CardActions>
+                  </Card>
+                ))}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
@@ -252,7 +281,7 @@ const Dashboard = () => {
 
           </Box>
           <Box sx={{ backgroundColor: 'white', width: '100%', height: '400px', borderRadius: 5 }}>
-            <p style={{ padding: '30px', fontWeight: 'bold', fontSize: '20px'  }}>Your Pie Chart</p>
+            <p style={{ padding: '30px', fontWeight: 'bold', fontSize: '20px' }}>Your Pie Chart</p>
           </Box>
         </Box>
       </Box>
