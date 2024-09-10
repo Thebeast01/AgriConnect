@@ -1,8 +1,8 @@
 import { Container, Box, Typography, Button } from '@mui/material'
-import Navbar from './Navbar';
+import Navbar from '../component/Navbar';
 import heroImage from '../assets/HeroPng.png';
-import AboutUs from './AboutUs';
-import Features from './Features';
+import AboutUs from '../component/AboutUs';
+import Features from '../component/Features';
 import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {

@@ -4,11 +4,11 @@ import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './outlet.jsx'
-import LandingPage from './component/LandingPage.jsx'
-import Register from './component/Register.jsx'
-import Dashboard from './Pages/Dashboard.jsx'
-import Login from './component/Login.jsx'
-import ChatInterface from './Pages/ChatInterface.jsx'
+import LandingPage from './Pages/LandingPage.jsx'
+import Register from './Pages/Farmer/Register.jsx'
+import Dashboard from './Pages/Farmer/Dashboard.jsx'
+import Login from './Pages/Farmer/Login.jsx'
+import ChatInterface from './Pages/Farmer/ChatInterface.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
