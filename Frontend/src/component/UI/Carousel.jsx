@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import broccoli from '../../assets/broccoli.png';
-import { Box, Card, Button, Container } from '@mui/material';
+import { Box, Typography, Card, CardContent, Button, Container } from '@mui/material';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -100,38 +100,32 @@ const CarouselComponent = () => {
                 setIsModalOpen(false)
         }
         return (
-                <Container>
-                        <Carousel centerMode='true' swipeable='true' width={1000} height={700} showStatus='false' autoPlay='true' renderThumbs={() => false} infiniteLoop='true' centerSlidePercentage={33.99} showArrows='true' status='false' stopOnHover='true' showIndicators='false'>
-
-                                {data.map((item, index) => (
-                                        <Card
-                                                onClick={() => handleOpen(item)}
-                                                sx={{
-                                                        height: '300px',
-                                                        width: '300px',
-                                                        borderRadius: '1rem',
-                                                        padding: '1rem',
+                <Container sx={{ overflow: 'hidden' }}>
+                        <div style={{ height: 250, width: 1000, padding: 3, display: 'flex', alignItems: 'center', gap: 10, overflowX: 'scroll', overflowY: 'hidden', scrollbarWidth: 'none' }}>
+                                {
+                                        data.map((items) => (
+                                                <Card sx={{
+                                                        height: 250,
+                                                        minWidth: 250,
                                                         display: 'flex',
-                                                        justifyContent: 'center',
-                                                        alignItems: 'center',
                                                         flexDirection: 'column',
-                                                }}
-                                        >
-                                                {index == length - 1 ? (
-                                                        <FontAwesomeIcon icon={faPlus} size='xl' />
+                                                        justifyContent: 'center',
+                                                        alignItems: 'center'
 
-                                                ) : (
-                                                        <div >
+                                                }} onClick={() => handleOpen(items)}
+                                                >
+                                                        <CardContent sx={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
+                                                                <img src={items.img} alt="" style={{ borderRadius: '2rem', objectFit: "cover" }} />
+                                                                <Typography><span style={{ fontWeight: 'bold' }}>Product Name:</span> {items.name}</Typography>
+                                                                <Typography> <span style={{ fontWeight: 'bold' }}>Crop Price :</span> {items.price}</Typography>
+                                                                <Typography> <span style={{ fontWeight: 'bold' }}>Quantity:</span>{items.quantity}</Typography>
+                                                        </CardContent>
 
-                                                                <img src={item.img} alt='image' height={200} width={200} />
-                                                                <p>Price : {item.price}</p>
-                                                                <p>Production Quantity : {item.quantity}</p>
 
-                                                        </div>
-                                                )}
-                                        </Card>
-                                ))}
-                        </Carousel>
+                                                </Card>
+                                        ))
+                                }
+                        </div>
                         <Modal sx={{
                                 height: '100%',
                                 width: '100%',
