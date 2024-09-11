@@ -45,7 +45,7 @@ const Dashboard = () => {
     }}>
       <Box gap={'5rem'} flex={1} display={'flex'} flexDirection={'row'}>
         <Grid container xs={12} md={4}>
-          <Grid item md={12} height={'80vh'} sx={{
+          <Grid item md={12} height={'100%'} sx={{
             backgroundColor: 'white',
             display: 'flex',
             flexDirection: 'column',
@@ -135,51 +135,10 @@ const Dashboard = () => {
                 display: 'flex',
                 flexDirection: 'row',
                 gap: '1rem',
+                overflow: 'hidden',
+                maxWidth: '100vh'
               }}>
-              {/* <Card sx={
-                {
-                  height: '300px',
-                  width: '300px',
-                  borderRadius: '1rem',
-                  padding: '1rem',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  flexDirection: 'column'
-                }
-              }>
-                <Skeleton variant="rectangular" width={260} height={200} />
-                <Typography>Price : 40Rs/kg</Typography>
-                <Typography>Quantity upto : 600kg</Typography>
-              </Card> */}
               <CarouselComponent />
-              {/* <Card sx={
-                {
-                  height: '300px',
-                  width: '300px',
-                  borderRadius: '1rem',
-                  padding: '1rem',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  flexDirection: 'column'
-                }
-              }>
-                <Box sx={
-                  {
-                    backgroundColor: Colors.dasboardBackground,
-                    padding: '1rem',
-                    borderRadius: '100%',
-                    height: '100px',
-                    width: '100px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }
-                }>
-                  <FontAwesomeIcon icon={faPlus} fontSize={'4rem'} />
-                </Box>
-            </Card> */}
             </Grid>
           </Grid>
 
