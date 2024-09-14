@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import img1 from '../assets/images/aboutUs_Img_1.jpg';
+import img1 from '../../assets/images/aboutUs_Img_1.jpg';
 
 const AboutUs = () => {
   return (
