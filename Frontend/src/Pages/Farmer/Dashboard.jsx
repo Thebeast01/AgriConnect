@@ -127,10 +127,13 @@ const Dashboard = () => {
               borderRadius: '2rem',
               boxShadow: 3
             }
-          }>          <Typography variant="h3" sx={{
-            marginLeft: '2rem', marginTop: '2rem'
+          }>
+            <Typography variant="h3" sx={{
+              marginLeft: '2rem',
+              marginTop: '2rem',
+              fontSize: '2rem',
           }}>Crops</Typography>
-            <Grid item xs={12} marginBottom={'1rem'} padding={'2rem'}
+            <Grid item xs={12} marginBottom={'1rem'} padding={'1rem 1rem 0 0'}
               sx={{
                 display: 'flex',
                 flexDirection: 'row',
