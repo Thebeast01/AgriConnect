@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Typography, CardMedia, CardContent, Box, Card } from '@mui/material';
-import img1 from '../assets/images/bg1.png';
-import img2 from '../assets/images/sign-up-img.jpg';
-import img3 from '../assets/images/explore-img.jpg';
-import img4 from '../assets/images/negotiate-img.jpg';
-import img5 from '../assets/images/manage-img.jpg';
+import img1 from '../../assets/images/bg1.png';
+import img2 from '../../assets/images/sign-up-img.jpg';
+import img3 from '../../assets/images/explore-img.jpg';
+import img4 from '../../assets/images/negotiate-img.jpg';
+import img5 from '../../assets/images/manage-img.jpg';
 
 const HowItWorks = () => {
   return (
