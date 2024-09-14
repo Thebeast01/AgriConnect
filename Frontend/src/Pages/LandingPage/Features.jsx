@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card, CardContent, Typography, Box } from '@mui/material';
 
-import Image1 from '../assets/Guaranteed_Market_access.jpg';
-import Image2 from '../assets/Dashboard.png';
-import Image3 from '../assets/Smart_contracts.jpg';
-import Image4 from '../assets/Logistics_Support.jpg';
+import Image1 from '../../assets/Guaranteed_Market_access.jpg';
+import Image2 from '../../assets/Dashboard.png';
+import Image3 from '../../assets/Smart_contracts.jpg';
+import Image4 from '../../assets/Logistics_Support.jpg';
 
 const featuresData = [
     {
