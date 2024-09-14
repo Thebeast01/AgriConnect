@@ -8,7 +8,7 @@ import img5 from '../assets/images/manage-img.jpg';
 
 const HowItWorks = () => {
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%' }} id="HowItWorks">
       <Box sx={{
         width: '100%',
         height: '500px',
@@ -16,7 +16,7 @@ const HowItWorks = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         zIndex:'9'
-      }}/> 
+      }} />
       <Box sx={{
         width: '100%',
         height: '10rem',

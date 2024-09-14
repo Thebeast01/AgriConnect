@@ -14,6 +14,7 @@ import {
         ListItemAvatar,
         ListItemText,
         makeStyles,
+        Input,
         Modal,
         TextField,
         Typography,
@@ -21,7 +22,7 @@ import {
 import Avatar from '@mui/material/Avatar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCaretDown, faPhone, faPaperclip, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import { Colors } from '../../Colors';
 import Ai from '../../assets/Ai.png';
 const ChatInterface = () => {
@@ -46,15 +47,14 @@ const ChatInterface = () => {
                 {
                         image: '',
                         name: 'Clat',
-                }, {
+                },
+                {
                         image: '',
-                        name: 'Stacy',
-                }, {
+                        name: 'Clat',
+                },
+                {
                         image: '',
-                        name: 'Ruby',
-                }, {
-                        image: '',
-                        name: 'Doe',
+                        name: 'Clat',
                 },
         ];
         const handleOpen = () => {
@@ -104,7 +104,7 @@ const ChatInterface = () => {
                                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
                                         </Box>
                                         <Box sx={{ width: '100%', height: '100%', marginTop: '1rem' }}>
-                                                <List sx={{ width: '100%', gap: 2, height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                                <List sx={{ width: '100%', gap: 2.5, height: '100%', display: 'flex', flexDirection: 'column' }}>
                                                         {data.map((item, index) => (
                                                                 <ListItem key={index} sx={{ padding: 2, boxShadow: 3, width: '100%', borderRadius: 3, '&:hover': { backgroundColor: 'white', boxShadow: 5, scale: 1.04, transition: 'all 0.3s ease-out' } }}>
                                                                         <ListItemAvatar>
@@ -246,10 +246,15 @@ const ChatInterface = () => {
                                                 </Card>
                                         </Box>
 
+                                        <Box sx={{ display: 'flex', alignItems: 'center', background: 'white', marginTop: 3, borderRadius: 2, paddingLeft: 2, paddingY: 1 }}>
+                                                <Input sx={{ backgroundColor: 'white', color: 'black', width: '100%', outline: 'none', borderRadius: 3, borderBottom: 0 }} disableUnderline='true' placeholder='Message' >
 
-                                        <TextField sx={{ backgroundColor: 'white', color: 'black', width: '100%', outline: 'none', borderRadius: 3, marginTop: 2 }} label='Talk To buyer' >
+                                                </Input>
+                                                <Button>
 
-                                        </TextField>
+                                                        <FontAwesomeIcon icon={faPaperPlane} size='xl' color="green" />
+                                                </Button>
+                                        </Box>
 
                                         <Box sx={{
                                                 display: 'flex',
