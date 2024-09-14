@@ -7,26 +7,26 @@ import Image3 from '../assets/Smart_contracts.jpg';
 import Image4 from '../assets/Logistics_Support.jpg';
 
 const featuresData = [
-  {
-    image: img1,
-    title: 'Guaranteed Market Access & Seamless Communication',
-    description: 'Connect directly with reliable buyers and sellers, reducing market risks. Negotiate terms easily through our integrated chat system, ensuring clear communication and faster deal closures.',
-  },
-  {
-    image: img2,
-    title: 'AI-Driven Market Insights & Pricing',
-    description: 'Optimize profits with AI-driven pricing suggestions and real-time market insights, helping you make informed decisions and secure the best deals.',
-  },
-  {
-    image: img3,
-    title: 'Smart Contracts & Secure Payments',
-    description: 'Leverage blockchain-powered smart contracts for transparent, automated agreements, ensuring trust and timely payments for both parties.',
-  },
-  {
-    image: img4,
-    title: 'End-to-End Logistics Support',
-    description: 'Simplify delivery with our flexible logistics options, ensuring your produce reaches its destination on time—whether using your own transport or our partnered services.',
-  },
+    {
+        image: Image1,
+        title: 'Guaranteed Market Access & Seamless Communication',
+        description: 'Connect directly with reliable buyers and sellers, reducing market risks. Negotiate terms easily through our integrated chat system, ensuring clear communication and faster deal closures.',
+    },
+    {
+        image: Image2,
+        title: 'AI-Driven Market Insights & Pricing',
+        description: 'Optimize profits with AI-driven pricing suggestions and real-time market insights, helping you make informed decisions and secure the best deals.',
+    },
+    {
+        image: Image3,
+        title: 'Smart Contracts & Secure Payments',
+        description: 'Leverage blockchain-powered smart contracts for transparent, automated agreements.',
+    },
+    {
+        image: Image4,
+        title: 'End-to-End Logistics Support',
+        description: 'Simplify delivery with our flexible logistics options, ensuring your products reach their destination on time.',
+    },
 ];
 
 const Features = () => {
