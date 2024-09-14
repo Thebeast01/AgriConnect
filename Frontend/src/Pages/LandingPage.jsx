@@ -4,6 +4,7 @@ import heroImage from '../assets/HeroPng.png';
 import AboutUs from '../component/AboutUs';
 import Features from '../component/Features';
 import { useNavigate } from 'react-router-dom';
+import HowItWorks from '../component/HowItWorks';
 
 const LandingPage = () => {
         const navigate = useNavigate()
@@ -56,6 +57,7 @@ const LandingPage = () => {
 
                         </Box>
                         <Features />
+                        <HowItWorks/>
                         <AboutUs />
                 </div>
         );
