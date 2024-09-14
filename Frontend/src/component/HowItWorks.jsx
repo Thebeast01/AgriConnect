@@ -1,48 +1,36 @@
 import React from 'react';
 import { Container, Typography, CardMedia, CardContent, Box, Card } from '@mui/material';
-import img1 from '../assets/background_bg1.png';
-import img2 from '../assets/bg1.png';
-import img3 from '../assets/sign-up-img.jpg';
-import img4 from '../assets/explore-img.jpg';
-import img5 from '../assets/negotiate-img.jpg';
-import img6 from '../assets/manage-img.jpg';
+import img1 from '../assets/images/bg1.png';
+import img2 from '../assets/images/sign-up-img.jpg';
+import img3 from '../assets/images/explore-img.jpg';
+import img4 from '../assets/images/negotiate-img.jpg';
+import img5 from '../assets/images/manage-img.jpg';
 
 const HowItWorks = () => {
   return (
-    <Box sx={{ width: '100%', mt: '13rem' }}>
+    <Box sx={{ width: '100%' }}>
       <Box sx={{
         width: '100%',
-        height: '10rem',
+        height: '500px',
         background: `url(${img1})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        position: 'relative',
-        mt: '5rem',
-      }}>
-        <Box sx={{
-          width: '27rem',
-          height: '25rem',
-          background: `url(${img2})`,
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          position: 'absolute',
-          top: '-7rem',
-          right: '1rem',
-        }} />
-      </Box>
+        zIndex:'9'
+      }}/> 
       <Box sx={{
         width: '100%',
         height: '10rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        background: '#64C267',
+        background: '#59B35C',
         border: 'none',
         padding: '1rem 0',
       }}>
         <Typography variant='h3' fontSize={'2rem'} fontWeight={'bold'} color='#fff'>How It Works</Typography>
         <Typography variant='h5' fontSize={'1.25rem'} color='rgb(236, 234, 234)'>Simple Steps to Connect, Contract and Cultivate Success</Typography>
       </Box>
+
       <Box sx={{
         width: '100%',
         display: 'flex',
@@ -52,10 +40,10 @@ const HowItWorks = () => {
         mb: '10rem',
       }}>
         {[
-          { image: img3, title: 'Sign Up & Choose Your Role', description: 'Create an account, select your role, and set up your profile.', number: 1 },
-          { image: img4, title: 'Explore & Connect', description: 'Browse and connect with potential partners, either farmers or buyers.', number: 2 },
-          { image: img5, title: 'Negotiate & Finalize', description: 'Discuss terms through chat and finalize agreements with a secure contract.', number: 3 },
-          { image: img6, title: 'Manage & Monitor', description: 'Keep track of ongoing deals and milestones from your dashboard.', number: 4 },
+          { image: img2, title: 'Sign Up & Choose Your Role', description: 'Create an account, select your role, and set up your profile.', number: 1 },
+          { image: img3, title: 'Explore & Connect', description: 'Browse and connect with potential partners, either farmers or buyers.', number: 2 },
+          { image: img4, title: 'Negotiate & Finalize', description: 'Discuss terms through chat and finalize agreements with a secure contract.', number: 3 },
+          { image: img5, title: 'Manage & Monitor', description: 'Keep track of ongoing deals and milestones from your dashboard.', number: 4 },
         ].map((item, index) => (
           <Card key={index} sx={{
             width: '270px',

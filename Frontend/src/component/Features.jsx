@@ -1,9 +1,10 @@
 import React from 'react';
-import { Box, Typography, Grid, Container } from '@mui/material';
-import img1 from '../assets/Guaranteed_Market_access.jpg';
-import img2 from '../assets/Dashboard.png';
-import img3 from '../assets/Smart_contracts.jpg';
-import img4 from '../assets/Logistics_Support.jpg';
+import { Card, CardContent, Typography, Box } from '@mui/material';
+
+import Image1 from '../assets/Guaranteed_Market_access.jpg';
+import Image2 from '../assets/Dashboard.png';
+import Image3 from '../assets/Smart_contracts.jpg';
+import Image4 from '../assets/Logistics_Support.jpg';
 
 const featuresData = [
   {
@@ -29,70 +30,99 @@ const featuresData = [
 ];
 
 const Features = () => {
-  return (
-    <div>
-      <Box 
-        sx={{
-          width: '100vw',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginTop: '3rem'
-        }}
-      >
-        <Typography variant='h4' color='#111' fontSize={'2.5rem'} fontWeight={'bold'}>Our Key Features</Typography>
-        <Typography variant='h6' fontSize={'1.5rem'} color='#333' align='left' marginTop={'0.5rem'}>Transforming Agriculture with Technology and Trust</Typography>
-      </Box>
-      <Box sx={{
-        width: '90vw',
-        borderLeft: '15px solid rgba(45, 125, 45, 0.7)',
-        marginLeft: '4rem',
-        paddingLeft: '2rem'
-      }}>
-        {featuresData.map((feature, index) => (
-          <Box key={index} sx={{
-            display: 'flex',
-            alignItems: 'flex-start',
-            width: '100%',
-            marginBottom: '4rem',
-            marginTop: index === 0 ? '6rem' : 0,
-          }}>
-            {index % 2 === 0 ? (
-              <Box sx={{
-                width: '100%',
-                height: '22rem',
-                flex: '1',
-                background: `url(${feature.image})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'contain',
-                marginRight: '4rem',
-              }} />
-            ) : null}
-            <Box sx={{
-              flex: '1',
-              display: 'flex',
-              flexWrap: 'wrap'
+    return (
+        <div style={{ margin: '2px' }} id='feature'>
+            <div style={{
+                height: 'fit-content',
+                display: 'flex',
+                flexDirection: 'row',
+                columnGap: '0px',
+                alignItems: 'flex-start',
+                padding: '50px',
+                position: 'relative',
             }}>
-              <Typography variant='h4' color='#222' fontWeight={'bold'} marginBottom={'2rem'}>{feature.title}</Typography>
-              <Typography variant='h6' color='#222'>{feature.description}</Typography>
-            </Box>
-            {index % 2 !== 0 ? (
-              <Box sx={{
-                width: '100%',
-                height: '22rem',
-                flex: '1',
-                background: `url(${feature.image})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'contain',
-                marginLeft: '4rem',
-              }} />
-            ) : null}
-          </Box>
-        ))}
-      </Box>
-    </div>
-  );
-};
+                <Box sx={{
+                    width: '10px',
+                    backgroundColor: '#39AE3E',
+                    position: 'absolute',
+                    left: '5%',
+                    top: 170,
+                    bottom: 70,
+                }} />
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    width: '100%',
+                    marginLeft: '60px'
+                }}>
+                    <Typography variant='h4' color='#111' fontSize={'2.5rem'} fontWeight={'bold'}>Our Key Features</Typography>
+                    <Typography variant='h6' fontSize={'1.5rem'} color='#333' align='left' marginTop={'0.5rem'}>Transforming Agriculture with Technology and Trust</Typography>
+                    {featuresData.map((feature, index) => (
+                        <Card
+                            key={index}
+                            style={{
+                                marginBottom: '20px',
+                                display: 'flex',
+                                width: '90%',
+                                height: 'fit-content',
+                                margin: ' auto',
+                                flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
+                                alignItems: 'center',
+                                padding: '20px',
+                                border: 'none',
+                                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                                borderRadius: '8px',
+                            }}>
+                            <Box sx={{
+                                padding: '10px',
+                                flex: '1 1 40%', // Flexible width to make it responsive
+                                display: 'flex',
+                                justifyContent: 'center',
+                            }}>
+                                <img src={feature.image} alt={feature.title} style={{
+                                    width: '100%',
+                                    maxWidth: '500px',
+                                    borderRadius: '8px',
+                                    objectFit: 'cover',
+                                }} />
+                            </Box>
+                            <CardContent
+                                style={{
+                                    margin: '1rem',
+                                    padding: '20px',
+                                    width: '100%',
+                                    flex: '1 1 60%',
+                                    maxWidth: '500px',
+                                }}>
+                                <Typography variant="h5" style={{
+                                    fontFamily: 'Roboto, sans-serif',
+                                    fontSize: '22px',
+                                    fontWeight: '600',
+                                    letterSpacing: '0.5px',
+                                    lineHeight: '1.4',
+                                    marginBottom: '10px',
+                                }}>
+                                    {feature.title}
+                                </Typography>
+                                <Typography variant="body2" style={{
+                                    fontFamily: 'Roboto, sans-serif',
+                                    fontSize: '16px',
+                                    fontWeight: '300',
+                                    letterSpacing: '0.5px',
+                                    lineHeight: '1.6',
+                                    marginBottom: '10px',
+                                }}>
+                                    {feature.description}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+            
+        </div>
+    );
+}
 
 export default Features;
