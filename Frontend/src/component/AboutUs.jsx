@@ -8,7 +8,6 @@ const AboutUs = () => {
                   }}
           >
                   <h1 id="about"> Hello</h1>
-        About us
           </div>
   )
 }
