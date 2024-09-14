@@ -3,7 +3,7 @@ import img1 from '../assets/images/aboutUs_Img_1.jpg';
 
 const AboutUs = () => {
   return (
-    <Box sx={{
+    <Box id='about' sx={{
       width: '100%',
       borderTop: '1px solid #999',
       boxShadow: '2px -5px 10px rgba(0,0,0,0.2)',

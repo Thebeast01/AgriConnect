@@ -1,15 +1,15 @@
 import React, { useReducer } from 'react'
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 import logo from '../assets/AgreeConnect.png';
 import zIndex from '@mui/material/styles/zIndex';
 const Navbar = () => {
-
+        const navigate = useNavigate()
         return (
                 <AppBar
-                        position='static'
+                        position='fixed'
                         sx={{
                                 backgroundColor: 'white',
                                 boxShadow: 'none',
@@ -22,7 +22,8 @@ const Navbar = () => {
                                         alignItems: 'center',
                                 }}
                         >
-                                <img src={logo} alt='AgreeConnect' style={{ width: '100px', height: '100px' }} />
+                                <img src={logo} alt='AgreeConnect' style={{ width: '100px', height: '100px' }} onClick={() => navigate('/home')} />
+
                                 <div
                                         style={{
                                                 width: '50%',
