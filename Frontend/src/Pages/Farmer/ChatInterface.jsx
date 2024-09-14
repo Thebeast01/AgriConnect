@@ -12,6 +12,7 @@ import {
         ListItem,
         ListItemAvatar,
         ListItemText,
+        makeStyles,
         Modal,
         TextField,
         Typography,
@@ -62,11 +63,11 @@ const ChatInterface = () => {
                 setIsOpen(false);
         }
         return (
-                <Container maxWidth={'xl'} sx={{ backgroundColor: '#E5EBE6', borderRadius: 5, overflow: 'hidden', padding: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Container maxWidth={'xl'} sx={{ borderRadius: 5, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
 
 
 
-                        <Grid container sx={{ marginTop: '20px', height: '100%', display: 'flex ', gap: 2 }}>
+                        <Grid container sx={{ marginTop: '20px', display: 'flex ', gap: 2 }}>
                                 <Grid
                                         item
                                         xs={12}
@@ -104,7 +105,7 @@ const ChatInterface = () => {
                                         <Box sx={{ width: '100%', height: '100%', marginTop: '1rem' }}>
                                                 <List sx={{ width: '100%', gap: 2, height: '100%', display: 'flex', flexDirection: 'column' }}>
                                                         {data.map((item, index) => (
-                                                                <ListItem key={index} sx={{ padding: 2, boxShadow: 3, width: '100%', borderRadius: 3 }}>
+                                                                <ListItem key={index} sx={{ padding: 2, boxShadow: 3, width: '100%', borderRadius: 3, '&:hover': { backgroundColor: 'white', boxShadow: 5, scale: 1.04, transition: 'all 0.3s ease-out' } }}>
                                                                         <ListItemAvatar>
                                                                                 <Avatar alt='Remy Sharp' src={item.image} />
                                                                         </ListItemAvatar>
@@ -164,7 +165,7 @@ const ChatInterface = () => {
                                                                 }}>Call</Typography>
                                                         </Box>
                                                 </Box>
-                                                <Box>
+                                                <Box sx={{ overflowY: 'scroll', height: 350, scrollbarWidth: 'none' }}>
                                                         <Card sx={{ borderRadius: 5, padding: 2, overflowY: 'auto' }}>
                                                                 <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                                                                         <Avatar alt='profile' />
@@ -318,3 +319,5 @@ const ChatInterface = () => {
 };
 
 export default ChatInterface;
+
+
