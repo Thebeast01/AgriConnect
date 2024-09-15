@@ -36,30 +36,30 @@ const Dashboard = () => {
   };
 
   return (
-    <Container maxWidth="xl" display={'flex'} sx={{
-      height:
-        '90vh',
+    <Container maxWidth="xl" display={'flex'} backgroundColor={'rgb(198, 255, 198)'} sx={{
+      height:'90vh',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: '3rem'
+      marginTop: '3rem',
     }}>
       <Box gap={'5rem'} flex={1} display={'flex'} flexDirection={'row'}>
         <Grid container xs={12} md={4}>
-          <Grid item md={12} height={'100%'} sx={{
+          <Grid item md={12} width={'100%'} sx={{
             backgroundColor: 'white',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            padding: '1rem',
             borderRadius: '2rem',
-            boxShadow: 3
+            boxShadow: 3,
 
           }}>
             <Box sx={{
               display: 'flex',
               justifyContent: 'center',
               flexDirection: 'column',
-              alignItems: 'center'
+              alignItems: 'center',
+              fontFamily: 'Open Sans',
+              marginY: '2rem'
             }}>
               <Box sx={{
                 display: 'flex',
@@ -68,40 +68,73 @@ const Dashboard = () => {
 
               }}>
                 <img src={OIP} />
-                <Typography fontWeight={'bold'} variant='h5' marginTop={'1rem'}>User Name</Typography>
-                <Typography fontWeight={'bold'} variant='h6' color={Colors.text1}>@UserID</Typography>
+                <Typography variant='title' sx={{
+                  fontSize: 24,
+                  fontWeight: 'bold',
+                  lineHeight: 1.5,
+                  color: Colors.text1,
+                }}>User Name</Typography>
+
+                <Typography variant='subtitle' sx={{
+                  fontSize: 18,
+                  fontWeight: 'medium',
+                  lineHeight: 1.5,
+                  color: Colors.text2,
+                }}>@UserID</Typography>
               </Box>
+
               <Box sx={{
-                marginTop: '2rem',
+                width: '90%',
                 boxShadow: 3,
-                padding: '2rem',
+                padding: '1rem',
                 borderRadius: '1rem',
-
+                margin: '4rem 2rem'
               }}>
-                <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}>Farmer Name : <span style={{ color: 'black' }}>Chandu</span> </Typography>
-                <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}> Email Id: <span style={{ color: 'black' }}>Chandu@gmail.com</span> </Typography>
-                <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}>Phone No. : <span style={{ color: 'black' }}>485948459</span> </Typography>  <Typography sx={{ color: Colors.text1, fontWeight: 'bold', marginBottom: '10px' }}>Address: <span style={{ color: 'black' }}>23F sector 3 , Ram Nagar, New York</span> </Typography>
-              </Box>
+                <Typography variant='body1' sx={{ 
+                  fontSize: 18,
+                  fontWeight: 'regular',
+                  color: Colors.text1,
+                  mb: '8px',
+                  }}>Name: <span style={{ color: Colors.accent, fontSize: 19 }}>Chandu</span> </Typography>
 
+                <Typography variant='body1' sx={{ 
+                  fontSize: 17,
+                  fontWeight: 'regular',
+                  lineHeight: 1.2,
+                  color: Colors.text1,
+                  mb: '8px',
+                   }}> Email Id: <span style={{ color: Colors.accent, fontSize: 18 }}>Chandu@gmail.com</span> </Typography>
+
+                <Typography variant='body2' sx={{ 
+                  color: Colors.text1,
+                  fontSize: 16,
+                  fontWeight: 'regular',
+                  lineHeight: 1.2,
+                  mb: '8px',
+                  }}>Phone No.<br/> <span style={{ color: Colors.accent, fontSize: 17}}>+91 485948459</span> </Typography>
+                  <Typography variant='body2' sx={{ 
+                    color: Colors.text1,
+                    fontSize: 15,
+                    fontWeight: 'regular',
+                    lineHeight: 1.2,
+                    mb: '8px', 
+                    }}>Address: <span style={{color: Colors.accent, fontSize: 14 }}>23F sector 3 , Ram Nagar, New York</span> </Typography>
+              </Box>
             </Box>
             <Box sx={{
+              width: '100%',
               display: 'flex',
+              flexDirection: 'row',
               justifyContent: 'space-between',
-              alignItems: 'end',
-              width: '80%',
-              height: '100%',
-              marginBottom: '3rem'
+              paddingX: '10px'
             }}>
               <Button variant='contained'
                 sx={{
-                  backgroundColor: 'white',
-
-                  color: 'black',
+                  backgroundColor: '#2A9F2F',
+                  color: 'white',
                   boxShadow: 3,
-                  paddingX: '2rem',
+                  paddingX: '1.5rem',
                   fontWeight: 'bold',
-
-
                 }}
               >Edit</Button>
 
@@ -111,11 +144,11 @@ const Dashboard = () => {
                   fontWeight: 'bold',
                   color: 'black',
                   boxShadow: 3,
-                  paddingX: '2rem'
+                  paddingX: '1.5rem'
 
 
                 }}
-              >More</Button>
+              >More &#62;</Button>
 
             </Box>
           </Grid>
@@ -123,23 +156,25 @@ const Dashboard = () => {
         <Grid container spacing={4} gap={'3rem'} >
           <Grid container sx={
             {
-              backgroundColor: Colors.dasboardBackground,
+              backgroundColor: Colors.background,
               borderRadius: '2rem',
-              boxShadow: 3
+              boxShadow: 3,
+              paddingBottom: '2rem',
             }
           }>
-            <Typography variant="h3" sx={{
-              marginLeft: '2rem',
-              marginTop: '2rem',
+            <Typography variant="title" sx={{
               fontSize: '2rem',
+              fontWeight: '500',
+              color: Colors.text1,
+              margin: '1rem 2rem'
           }}>Crops</Typography>
-            <Grid item xs={12} marginBottom={'1rem'} padding={'1rem 1rem 0 0'}
+            <Grid item xs={12}
               sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 gap: '1rem',
                 overflow: 'hidden',
-                maxWidth: '100vh'
+                maxWidth: '100%'
               }}>
               <CarouselComponent />
             </Grid>
@@ -148,16 +183,23 @@ const Dashboard = () => {
           <Grid container spacing={2}
             sx={
               {
-                backgroundColor: Colors.dasboardBackground,
+                backgroundColor: Colors.background,
                 borderRadius: '2rem',
                 boxShadow: 3,
                 padding: '2rem',
 
               }
             }>
-            <Typography variant="h4">Current Contracts</Typography>
-            <Grid container flexDirection={'column'} xs={12} sx={{
+            <Typography variant="title" sx={{
+              fontSize: '2rem',
+              fontWeight: '500',
+              color: Colors.text1,
+              mb: '1rem',
+              ml: '1rem'
+            }}>Current Contracts</Typography>
+            <Grid container xs={12} sx={{
               display: 'flex',
+              flexDirection: 'column',
               height: 250,
               overflowY: 'scroll',
               scrollBehavior: 'smooth',
@@ -181,28 +223,58 @@ const Dashboard = () => {
                     <CardContent>
                       <Grid container spacing={2}>
                         <Grid item xs={6}>
-                          <Typography variant="body2">
-                            Crop Price: 30rs/Kg
+                          <Typography variant="body2" sx={{
+                            fontSize: 18,
+                            fontWeight: 'regular',
+                          }}>
+                            Crop Price: <span style={{
+                              fontSize: 17,
+                              fontWeight: '400',
+                            }}>30rs/Kg</span>
                           </Typography>
-                          <Typography variant="body2">
-                            Start Date: 16/11/2024
+                          <Typography variant="body2" sx={{
+                            fontSize: 18,
+                            fontWeight: 'regular',
+                          }}>
+                            Start Date: <span style={{
+                              fontSize: 17,
+                              fontWeight: '400',
+                            }}>16/11/2024</span>
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
-                          <Typography variant="body2">
-                            Quantity: 500kg
+                          <Typography variant="body2" sx={{
+                            fontSize: 18,
+                            fontWeight: 'regular',
+                          }}>
+                            Quantity: <span style={{
+                              fontSize: 17,
+                              fontWeight: '400',
+                            }}>500kg</span>
                           </Typography>
-                          <Typography variant="body2">
-                            Due Date: 16/11/2024
+                          <Typography variant="body2" sx={{
+                            fontSize: 18,
+                            fontWeight: 'regular',
+                          }}>
+                            Due Date: <span style={{
+                              fontSize: 17,
+                              fontWeight: '400',
+                            }}>16/11/2024</span>
                           </Typography>
                         </Grid>
                       </Grid>
-                      <Typography variant="body2">
-                        Total: 1,50,000/- Rs
+                      <Typography variant="body2" sx={{
+                            fontSize: 18,
+                            fontWeight: 'regular',
+                          }}>
+                        Total: <span style={{
+                          fontSize: 17,
+                          fontWeight: '400',
+                        }}>1,50,000/- Rs</span>
                       </Typography>
                     </CardContent>
                     <CardActions>
-                      <Button size="small">View More</Button>
+                      <Button size="small" sx={{fontWeight:'bold'}}>View More</Button>
                     </CardActions>
                   </Card>
                 ))}
@@ -214,7 +286,7 @@ const Dashboard = () => {
       <Box sx={{
 
         width: '100%',
-        backgroundColor: Colors.dasboardBackground,
+        backgroundColor: Colors.background,
         marginTop: 15,
         borderRadius: 5,
         padding: 5
