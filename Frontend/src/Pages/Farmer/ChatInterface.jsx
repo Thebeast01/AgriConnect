@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import {
         Box,
+        Input,
         Button,
         Card,
         CardContent,
@@ -19,6 +20,7 @@ import {
 } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SendIcon from '@mui/icons-material/Send';
 import { faMagnifyingGlass, faCaretDown, faPhone, faPaperclip, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { Colors } from '../../Colors';
@@ -246,9 +248,17 @@ const ChatInterface = () => {
                                         </Box>
 
 
-                                        <TextField sx={{ backgroundColor: 'white', color: 'black', width: '100%', outline: 'none', borderRadius: 3, marginTop: 2 }} label='Talk To buyer' >
+                                        <Box sx={{ display: 'flex', flexDirection: 'row' ,columnGap: '0.3rem' , alignItems: 'center', background: 'white', marginTop: 3, borderRadius: 1 }}>
+                                                <TextField sx={{ backgroundColor: 'white', color: 'black', width: '100%', outline: 'none', borderBottom: 0 }} label="Talk to Buyer" variant="filled" >
 
-                                        </TextField>
+                                                </TextField>
+                                                <Button
+                                                        variant="contained"
+                                                        style={{ minWidth: '3rem', minHeight: '3rem', backgroundColor:'white' }}
+                                                >
+                                                        <SendIcon style={{  color: 'green' } } />
+                                                </Button>
+                                        </Box>
 
                                         <Box sx={{
                                                 display: 'flex',
