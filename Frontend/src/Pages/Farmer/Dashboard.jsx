@@ -36,21 +36,23 @@ const Dashboard = () => {
   };
 
   return (
-    <Container maxWidth="xl" display={'flex'} backgroundColor={'rgb(198, 255, 198)'} sx={{
-      height:'90vh',
+    <Container maxWidth="xl" display={'flex'} sx={{
+      height:'100%',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: '3rem',
+      backgroundColor: 'rgb(198, 255, 198)',
+      overflow: 'hidden'
     }}>
-      <Box gap={'5rem'} flex={1} display={'flex'} flexDirection={'row'}>
-        <Grid container xs={12} md={4}>
-          <Grid item md={12} width={'100%'} sx={{
+      <Box gap={'2rem'} flex={1} display={'flex'} flexDirection={'row'}>
+        <Grid container xs={12} md={8} lg={6}>
+          <Grid item md={12} sx={{
             backgroundColor: 'white',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             borderRadius: '2rem',
             boxShadow: 3,
+            mt: '2rem'
 
           }}>
             <Box sx={{
@@ -153,20 +155,24 @@ const Dashboard = () => {
             </Box>
           </Grid>
         </Grid>
-        <Grid container spacing={4} gap={'3rem'} >
+        <Grid container gap={'10px'}>
           <Grid container sx={
             {
+              height: '45%',
               backgroundColor: Colors.background,
-              borderRadius: '2rem',
+              borderRadius: '2rem 2rem 0 0',
               boxShadow: 3,
-              paddingBottom: '2rem',
+              mt: '2.5rem',
+              pb: '2rem'
             }
           }>
             <Typography variant="title" sx={{
+              display: 'flex',
+              alignItems: 'center',
               fontSize: '2rem',
               fontWeight: '500',
               color: Colors.text1,
-              margin: '1rem 2rem'
+              ml: '2rem'
           }}>Crops</Typography>
             <Grid item xs={12}
               sx={{
@@ -174,19 +180,20 @@ const Dashboard = () => {
                 flexDirection: 'row',
                 gap: '1rem',
                 overflow: 'hidden',
-                maxWidth: '100%'
+                maxWidth: '100%',
               }}>
               <CarouselComponent />
             </Grid>
           </Grid>
 
-          <Grid container spacing={2}
+          <Grid container
             sx={
               {
+                height: '40%',
                 backgroundColor: Colors.background,
-                borderRadius: '2rem',
+                borderRadius: '0 0 2rem 2rem',
                 boxShadow: 3,
-                padding: '2rem',
+                padding: '0 0 6rem 2rem'
 
               }
             }>
@@ -194,10 +201,8 @@ const Dashboard = () => {
               fontSize: '2rem',
               fontWeight: '500',
               color: Colors.text1,
-              mb: '1rem',
-              ml: '1rem'
             }}>Current Contracts</Typography>
-            <Grid container xs={12} sx={{
+            <Grid container xs={12}  sx={{
               display: 'flex',
               flexDirection: 'column',
               height: 250,
