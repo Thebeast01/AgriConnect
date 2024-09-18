@@ -24,7 +24,7 @@ function App() {
       <Route exact path='/' element={user ? <Navigate to={'/home'} /> : <Navigate to={'/login'} />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-        <Route path="/home" element={<LandingPage />} />
+      <Route path="/home" element={<LandingPage />} />
         <Route path="/aboutUs" element={<Features />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
