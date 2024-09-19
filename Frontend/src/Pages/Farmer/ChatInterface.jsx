@@ -24,7 +24,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCaretDown, faPhone, faPaperclip, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import { Colors } from '../../Colors';
-import Ai from '../../assets/Ai.png';
+import Ai from '../../assets/ai.png';
 const ChatInterface = () => {
         const [isOpen, setIsOpen] = useState(false);
         const data = [
