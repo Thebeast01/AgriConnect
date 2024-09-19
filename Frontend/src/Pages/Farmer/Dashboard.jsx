@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Container, Typography, Card, CardContent, Grid, CardHeader, CardMedia, CardActions, TextField, IconButton, Skeleton } from '@mui/material';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { Colors } from '../../Colors';
 import OIP from '../../assets/profile.png'
-import Plus from '../../assets/plus.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import LineGraph from '../../component/LineGraph';
 import CarouselComponent from '../../component/UI/Carousel';
 const Dashboard = () => {
@@ -14,24 +10,23 @@ const Dashboard = () => {
       name: 'XYZ Company',
       price: '40 Rs/kg',
       quantity: '600 kg',
-      image: 'path/to/your/image.jpg' // Replace with the actual path to your image
+      image: 'path/to/your/image.jpg'
     },
     {
       name: 'XYZ Company',
       price: '40 Rs/kg',
       quantity: '600 kg',
-      image: 'path/to/your/image.jpg' // Replace with the actual path to your image
+      image: 'path/to/your/image.jpg'
     },
     {
       name: 'XYZ Company',
       price: '40 Rs/kg',
       quantity: '600 kg',
-      image: 'path/to/your/image.jpg' // Replace with the actual path to your image
+      image: 'path/to/your/image.jpg'
     },
   ]);
 
   const handleAddMore = () => {
-    // Handle adding more crops data
     setCropsData([...cropsData, { /* New crop data */ }]);
   };
 

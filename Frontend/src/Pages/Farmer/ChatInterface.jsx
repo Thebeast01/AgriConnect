@@ -64,7 +64,7 @@ const ChatInterface = () => {
                 setIsOpen(false);
         }
         return (
-                <Container maxWidth={'xl'} sx={{ borderRadius: 5, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
+                <Container maxWidth={'xl'} sx={{ borderRadius: 5, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
 
 
 
