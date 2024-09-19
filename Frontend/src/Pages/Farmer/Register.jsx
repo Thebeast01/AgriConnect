@@ -7,10 +7,6 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { setDoc, doc } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 import dayjs from 'dayjs';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 const Register = () => {
         const navigate = useNavigate()
@@ -76,15 +72,15 @@ const Register = () => {
                                 flexDirection: 'column',
 
                         }}>
-                                <Box width={'600px'} marginBottom={'3rem'} marginTop={'1rem'}>
+                                <Box width={'500px'} marginBottom={'3rem'} marginTop={'1rem'}>
                                         <Typography variant="h2" textAlign={'center'}>Join Us</Typography>
-                                        <Typography fontSize={'23px'} textAlign={'center'} marginTop={'1rem'}>Add your farm details, crops information, and certification to get matched with the best buyers</Typography>
+
                                 </Box>
                                 <Box
                                         padding={'2rem'}
                                         boxShadow={3}
                                         borderRadius={2}
-                                        sx={{ backgroundImage: 'linear-gradient(to right, #D7E2D8, #A3C1A5)' }}
+                                        sx={{ width: '500px', backgroundImage: 'linear-gradient(to right, #D7E2D8, #A3C1A5)' }}
                                 >
 
                                         <Box display={'flex'} gap={'1rem'}>
@@ -108,27 +104,8 @@ const Register = () => {
                                                         fullWidth
                                                         margin="normal"
                                                 />
-                                                <TextField
-                                                        label="Phone Number"
-                                                        type="text"
-                                                        value={registerData.phone}
-                                                        onChange={(e) => setRegisterData({ ...registerData, phone: e.target.value })}
-                                                        fullWidth
-                                                        margin="normal"
-                                                /></Box>
-                                        <FormControl>
-                                                <FormLabel>Gender</FormLabel>
-                                                <RadioGroup
-                                                        row
-                                                        aria-labelledby="demo-row-radio-buttons-group-label"
-                                                        name="row-radio-buttons-group"
-                                                >
-                                                        <FormControlLabel value="female" control={<Radio />} label="Female" onChange={(e) => setRegisterData({ ...registerData, gender: e.target.value })} />
-                                                        <FormControlLabel value="male" control={<Radio />} label="Male" onChange={(e) => setRegisterData({ ...registerData, gender: e.target.value })} />
-                                                        <FormControlLabel value="other" control={<Radio />} label="Other" onChange={(e) => setRegisterData({ ...registerData, gender: e.target.value })} />
+                                        </Box>
 
-                                                </RadioGroup>
-                                        </FormControl>
                                         <TextField
                                                 label="Password"
                                                 type="password"
