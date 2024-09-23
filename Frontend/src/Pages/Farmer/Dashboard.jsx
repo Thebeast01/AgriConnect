@@ -7,7 +7,7 @@ import Plus from '../../assets/plus.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import LineGraph from '../../component/LineGraph';
-import CarouselComponent from '../../component/UI/Carousel';
+import CarouselComponent from '../../component/ReComp/Carousel';
 const Dashboard = () => {
   const [cropsData, setCropsData] = useState([
     {
